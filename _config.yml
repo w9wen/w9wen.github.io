@@ -55,12 +55,12 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true # true, false (default)
 search_full_content      : true # true, false (default)
-search_provider          : algolia # lunr (default), algolia
+search_provider          : "algolia" # lunr (default), algolia
 algolia:
   application_id         : "TQ4L8E3R4A" # YOUR_APPLICATION_ID
   index_name             : "dev_w9wen" # YOUR_INDEX_NAME
   search_only_api_key    : "e22bbed2402dec10f699b731d1961a5e" # YOUR_SEARCH_ONLY_API_KEY
-  powered_by             : # true (default), false
+  powered_by             : true # true (default), false
 
 # SEO Related
 google_site_verification :
