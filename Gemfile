@@ -23,11 +23,14 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   # gem "github-pages"
   # gem "jekyll-remote-theme"
-  gem 'jekyll-algolia', '~> 1.0'
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+  gem "jekyll-paginate"
+  gem 'jekyll-algolia'
 end
 
 if Gem.win_platform?
-  gem "jekyll"
+  gem "jekyll", "~> 3.6"
   gem "minimal-mistakes-jekyll"
 else
   gem "github-pages", group: :jekyll_plugins
