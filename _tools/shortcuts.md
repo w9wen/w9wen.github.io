@@ -2,7 +2,6 @@
   title: Shortcuts
   permalink: /docs/shortcuts
   toc: true
-  comments: true
 ---
 
 # Welcome to my shortcuts libraries.
