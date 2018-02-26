@@ -30,7 +30,7 @@ group :jekyll_plugins do
 end
 
 if Gem.win_platform?
-  gem "jekyll", "~> 3.6"
+  gem "jekyll"
   gem "minimal-mistakes-jekyll"
 else
   gem "github-pages", group: :jekyll_plugins
