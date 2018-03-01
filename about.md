@@ -10,4 +10,4 @@ permalink: /about/
 I live in Taipei. Taiwan, My wife and I have two boys.
 
 ### Academic
-I didn't know what I gonna do in the future, 
+I didn't know what I gonna do in the future,
