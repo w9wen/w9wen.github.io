@@ -74,6 +74,15 @@ Reference [Here](https://shortcutworld.com/en/Eclipse/win/all#link_11)<!-- {:tar
 
 ## Atom
 
+### Window Management
+Reference [HERE](https://github.com/nwinkler/atom-keyboard-shortcuts#window-management)
+* 組合快速鍵以此處為準
+*
+
+| Mac                               | Windows                             | To do this |
+|-----------------------------------|-------------------------------------|------------|
+| cmd + K, cmd + up/down/left/right | Ctrl + K, Ctrl + up/down/left/right | Focus Pane |
+
 ### Markdown
 
 | Mac              | Windows          | To do this     |
