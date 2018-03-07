@@ -83,7 +83,7 @@ Reference [HERE](https://github.com/nwinkler/atom-keyboard-shortcuts#window-mana
 |-----------------------------------|-------------------------------------|------------|
 | cmd + K, cmd + up/down/left/right | Ctrl + K, Ctrl + up/down/left/right | Focus Pane |
 
-### Markdown
+### Markdown Preview
 
 | Mac              | Windows          | To do this     |
 |------------------|------------------|----------------|
