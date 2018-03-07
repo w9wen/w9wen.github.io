@@ -10,7 +10,7 @@ The reason is I work in multiple platform for very short time, I cannot remember
 
 
 ## Mac OS
-Reference [Here](https://support.apple.com/en-us/HT204434 "Mac accessibility shortcuts"){:target="_blank"}
+Reference [Here](https://support.apple.com/en-us/HT204434 "Mac accessibility shortcuts")<!-- {:target="_blank"} -->
 
 ### Mission Control
 
@@ -20,7 +20,7 @@ Reference [Here](https://support.apple.com/en-us/HT204434 "Mac accessibility sho
 
 ## Windows 10
 
-Reference [Here](https://support.microsoft.com/en-us/help/12445/windows-keyboard-shortcuts "Keyboard shortcuts in Windows"){:target="_blank"}
+Reference [Here](https://support.microsoft.com/en-us/help/12445/windows-keyboard-shortcuts "Keyboard shortcuts in Windows")<!-- {:target="_blank"} -->
 
 ### Virtual desktops keyboard shortcuts
 
@@ -57,7 +57,7 @@ Reference [Here](https://support.microsoft.com/en-us/help/12445/windows-keyboard
 
 ### Run and Debug
 
-Reference [Here](https://shortcutworld.com/en/Eclipse/win/all#link_11){:target="_blank"}
+Reference [Here](https://shortcutworld.com/en/Eclipse/win/all#link_11)<!-- {:target="_blank"} -->
 
 | Mac | Windows            | To do this                        |
 |-----|--------------------|-----------------------------------|
