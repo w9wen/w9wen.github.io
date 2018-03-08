@@ -12,11 +12,42 @@ The reason is I work in multiple platform for very short time, I cannot remember
 ## Mac OS
 Reference [Here](https://support.apple.com/en-us/HT204434 "Mac accessibility shortcuts")<!-- {:target="_blank"} -->
 
+* Command ⌘
+* Option ⌥
+* Shift  ⇧
+* Control ⌃
+
 ### Mission Control
 
 | Press this key    | To do this        |
 |-------------------|-------------------|
-| Ctrl + Left arrow | Move left a space |
+| ⌃ + Left arrow | Move left a space |
+
+## Xcode
+Reference [Here](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/xcode_help-command_shortcuts/MenuCommands/MenuCommands014.html)<!-- {:target="_blank"} -->
+
+### Table 1-3  Edit menu command shortcuts
+
+| Press this key | To do this         |
+|----------------|--------------------|
+| ⇧ + ⌘ + O      | Open Quickly…      |
+| ⌥ + ⌘ + L      | Filter in Library  |
+| ⇧ + ⌘ + F      | Find in Workspace… |
+
+### Table 1-5  Navigate menu command shortcuts
+
+| Press this key | To do this                  |
+|----------------|-----------------------------|
+| ⌘ + L          | Reveal in Project Navigator |
+| ⌘ + '          | Jump to Next Issue          |
+
+### Table 1-7 Product menu command shortcuts
+
+| Press this key | To do this |
+|----------------|------------|
+| ⌘ + R          | Run        |
+| ⌘ + B          | Build      |
+| ⇧ + ⌘ + K      | Clean      |
 
 ## Windows 10
 
@@ -84,7 +115,7 @@ Reference [HERE](https://github.com/nwinkler/atom-keyboard-shortcuts#window-mana
 | ⌘ + K, ⌘ + up/down/left/right | Ctrl + K, Ctrl + up/down/left/right | Focus Pane |
 
 ### Markdown Preview
-Option ⌥
+
 | Mac              | Windows          | To do this     |
 |------------------|------------------|----------------|
 | ⌃ + ⇧ + M | Ctrl + Shift + M | Toogle Preview |
