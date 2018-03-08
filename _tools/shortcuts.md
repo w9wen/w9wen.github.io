@@ -81,13 +81,13 @@ Reference [HERE](https://github.com/nwinkler/atom-keyboard-shortcuts#window-mana
 
 | Mac                               | Windows                             | To do this |
 |-----------------------------------|-------------------------------------|------------|
-| cmd + K, cmd + up/down/left/right | Ctrl + K, Ctrl + up/down/left/right | Focus Pane |
+| ⌘ + K, ⌘ + up/down/left/right | Ctrl + K, Ctrl + up/down/left/right | Focus Pane |
 
 ### Markdown Preview
-
+Option ⌥
 | Mac              | Windows          | To do this     |
 |------------------|------------------|----------------|
-| Ctrl + Shift + M | Ctrl + Shift + M | Toogle Preview |
+| ⌃ + ⇧ + M | Ctrl + Shift + M | Toogle Preview |
 
 ## SourceTree
 
