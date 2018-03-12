@@ -108,8 +108,14 @@ Reference [Here](https://shortcutworld.com/en/Eclipse/win/all#link_11)<!-- {:tar
 ### Window Management
 Reference [HERE](https://github.com/nwinkler/atom-keyboard-shortcuts#window-management)
 * 組合快速鍵以此處為準
-*
 
+### General
+| Mac                               | Windows                             | To do this |
+|-----------------------------------|-------------------------------------|------------|
+| ⌘ + , | Ctrl + , | Preferences/Settings |
+|  ⇧ +⌘ + P  | Shift + Ctrl + P  | Command Palette  |
+
+### Window management
 | Mac                               | Windows                             | To do this |
 |-----------------------------------|-------------------------------------|------------|
 | ⌘ + K, ⌘ + up/down/left/right | Ctrl + K, Ctrl + up/down/left/right | Focus Pane |
