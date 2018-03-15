@@ -123,6 +123,11 @@ Reference [HERE](https://github.com/nwinkler/atom-keyboard-shortcuts#window-mana
 |-------------------------------|-------------------------------------|------------|
 | ⌘ + K, ⌘ + up/down/left/right | Ctrl + K, Ctrl + up/down/left/right | Focus Pane |
 
+### PlatformIO IDE Terminal
+
+Mac | Windows  | To do this
+----|----------|-----------
+    | Ctrl + ` | Toggle
 
 ## SourceTree
 
