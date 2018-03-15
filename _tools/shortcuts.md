@@ -110,10 +110,12 @@ Reference [HERE](https://github.com/nwinkler/atom-keyboard-shortcuts#window-mana
 
 ### General
 
-| Mac      | Windows          | To do this           |
-|----------|------------------|----------------------|
-| ⌘ + ,    | Ctrl + ,         | Preferences/Settings |
-| ⇧ +⌘ + P | Shift + Ctrl + P | Command Palette      |
+| Mac       | Windows          | To do this                    |
+|-----------|------------------|-------------------------------|
+| ⌘ + ,     | Ctrl + ,         | Preferences/Settings          |
+| ⇧ +⌘ + P  | Shift + Ctrl + P | Command Palette               |
+| ⌃ + ⇧ + M | Ctrl + Shift + M | Toogle Preview                |
+| ⌘ + \     | Ctrl + \         | Toggles Atom's file Tree View |
 
 ### Window management
 
@@ -121,11 +123,6 @@ Reference [HERE](https://github.com/nwinkler/atom-keyboard-shortcuts#window-mana
 |-------------------------------|-------------------------------------|------------|
 | ⌘ + K, ⌘ + up/down/left/right | Ctrl + K, Ctrl + up/down/left/right | Focus Pane |
 
-### Markdown Preview
-
-| Mac              | Windows          | To do this     |
-|------------------|------------------|----------------|
-| ⌃ + ⇧ + M | Ctrl + Shift + M | Toogle Preview |
 
 ## SourceTree
 
