@@ -19,6 +19,9 @@ Raspberry Pi是一台小型電腦。
 
 RS Components
 
+#### 掏寶網
+[Raspberry Pi 3 Model B+](https://www.ithome.com.tw/news/121813) 推出的新聞出來後，在官網上推薦的購買連結，台灣是連到掏寶網，好好地逛了一下，在2018-03-16下訂購了主機板、LED矩陣模組以及一個鏡頭模組，但沒想到等了四天，掏寶網上的轉運訊息完全沒有動靜
+![taobao-order](/images/2018/03/taobao-order.png)
 
 
 採購清單
