@@ -1,5 +1,5 @@
 ---
-title: "解決更新Ruby Sass後Jeklly編譯的錯誤"
+title: 解決更新Ruby Sass後Jeklly編譯的錯誤
 categories: jekyll ruby sass
 ---
 
