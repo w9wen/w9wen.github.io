@@ -23,4 +23,5 @@ Encoding.default_external = Encoding.find('utf-8')
 jekyll serve --draft
 ```
 完成
+
 ![solved-update-02](/images/2018/04/solved-update-02.png)
