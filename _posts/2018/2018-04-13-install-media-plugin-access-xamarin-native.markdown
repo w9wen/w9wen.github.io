@@ -19,30 +19,29 @@ categories: Xamarin Xamarin.Forms Plugin
 2. 安裝設定CurrentActivity Plugin
   請參考[[Xamarin.Forms] 安裝CurrentActivity Plugin藉以存取Xamarin.Android Activity](/xamarin/xamarin.forms/plugin/install-currentactivity-plugin-access-xamarin-android-activity/)
 3. 聲明裝置必須性，在AssemblyInfo.cs加入以下程式碼
- ``` csharp
- [assembly: UsesFeature("android.hardware.camera", Required = false)]
- [assembly: UsesFeature("android.hardware.camera.autofocus", Required = false)]
- ```
-4. 為了指定存取檔案資料夾，統一在AndroidManifest.xml的`<application>`進行以下配置
-
-  ``` xml
-  <provider android:name="android.support.v4.content.FileProvider"
-          android:authorities="${applicationId}.fileprovider"
-          android:exported="false"
-          android:grantUriPermissions="true">
-
-    <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
-                   android:resource="@xml/file_paths"></meta-data>
-  </provider>
+  ```csharp
+    [assembly: UsesFeature("android.hardware.camera", Required = false)]
+    [assembly: UsesFeature("android.hardware.camera.autofocus", Required = false)]
   ```
+4. 為了指定存取檔案資料夾，統一在AndroidManifest.xml的`<application>`進行以下配置
+      ```xml
+        <provider android:name="android.support.v4.content.FileProvider"
+                android:authorities="${applicationId}.fileprovider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+
+          <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                         android:resource="@xml/file_paths"></meta-data>
+        </provider>
+      ```
 還沒完，我累了~~~😫，這是跨平台必經過程嗎?不過，先苦後甘
 4.建立一個App存取檔案專屬的路徑，在Resrouces下建立一個名為"xml"的資料夾，底下增加一個名為"file_paths"的xml檔案，內容如下
   ```xml
-  <?xml version="1.0" encoding="utf-8" ?>
-  <paths xmlns:android="http://schemas.android.com/apk/res/android">
-    <external-files-path name="my_images" path="Pictures" />
-    <external-files-path name="my_movies" path="Movies" />
-  </paths>
+    <?xml version="1.0" encoding="utf-8" ?>
+    <paths xmlns:android="http://schemas.android.com/apk/res/android">
+      <external-files-path name="my_images" path="Pictures" />
+      <external-files-path name="my_movies" path="Movies" />
+    </paths>
   ```
 結束....🔚~~~Android
 
