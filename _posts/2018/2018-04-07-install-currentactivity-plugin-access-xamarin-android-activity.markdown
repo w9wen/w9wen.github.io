@@ -7,7 +7,8 @@ categories: Xamarin Xamarin.forms plugin
 
 1. 安裝CurrentActivity Plugin
 在Xamarin.Android專案使用Manage Nuget Packages找到Plugin.CurrentActivity，目前版本是v1.0.1，最後更新時間是2015-12-19，但已看到有beta版釋出，比較放心勇敢地使用😸
-![install-currentactivity-01](/images/2018/04/install-currentactivity-01.png)
+  ![install-currentactivity-01](/images/2018/04/install-currentactivity-01.png)
+
 2. 新增一個名為"MainApplication.cs"的C# class
   * 安裝CurrentActivity後會開啟readme.txt內容敘述中，說明了Xamarin.Android根目錄會安裝"MainApplication.cs"，這樣的敘述我認為應該是自動產生，但看起來並沒有，就自己建立吧。
   * 在class加註[Application]。
@@ -17,17 +18,7 @@ categories: Xamarin Xamarin.forms plugin
   * override OnCreate以及OnTerminate，分別加入RegisterActivityLifecycleCallbacks(this)以及UnregisterActivityLifecycleCallbacks(this)
   * 在OnActivityCreated, OnActivityStarted, OnActivityResumed加入CrossCurrentActivity.Current.Activity = activity。
 3. 完整程式碼如下
-    
   ```csharp
-  using System;
-
-  using Android.App;
-  using Android.OS;
-  using Android.Runtime;
-  using Plugin.CurrentActivity;
-
-  namespace TacTechNative.Droid
-  {
      [Application]
      public class MainApplication : Application, Application.IActivityLifecycleCallbacks
      {
@@ -62,7 +53,6 @@ categories: Xamarin Xamarin.forms plugin
              CrossCurrentActivity.Current.Activity = activity;
          }
      }
-  }
   ```
 
 到這邊安裝設定完成，在跨專案存取Activity。
