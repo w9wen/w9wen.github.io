@@ -20,7 +20,12 @@ date: "2018-03-20 04:55"
 2. 大ㄎㄡ胖碳烤三明治
   * [連結](http://insect0633.pixnet.net/blog/post/435029306-【鹽埕。高雄】大ㄎㄡ%28摳%29胖碳烤三明治-50年)  
 3. 虱目魚魚皮湯
-  * [連結](https://permio1.com/yancheng-milk-fish/) 
+  * [連結](https://permio1.com/yancheng-milk-fish/)
+4. 汕頭火鍋
+5. Martin 咖啡廳
+6. 旗津海鮮
+7. 烤黑輪、鹽酥雞
+8. 炒羊肉
 
 ### 旅遊景點
 * 壽山 - 高雄夜景
