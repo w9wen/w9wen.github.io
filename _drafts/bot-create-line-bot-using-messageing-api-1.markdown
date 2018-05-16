@@ -38,6 +38,7 @@ Chatbot為近年最為火紅的應用服務，越多人使用的平台，越能�
   - Root下的LineBotApp.cs，就是我們撰寫傳接LINE Messaging API的位置，
 3. Web.config設定  
 以下由相關網站取得資料填入  
+
 ```HTML
 <appSettings>
   <add key="ChannelSecret" value="由LINE Console取得(Channel secret)" />
@@ -45,7 +46,6 @@ Chatbot為近年最為火紅的應用服務，越多人使用的平台，越能�
   <add key="StorageConnectionString" value="由Azure Storage Account取得連接字串" />
 </appSettings>
 ```
-
 4. 建立WebAPI網站
   - 最快的方式是將網站發布到Azure Web App。
   - 在LINE Developer Console啟用Webhooks，並將Azure Web App的WebAPI位置設定在Webhook URL，SSL是必須的，Azure Web App好處是預設啟用方便開發人員進行部署，只要將URL改為https即可(不建議產品類型)!  
