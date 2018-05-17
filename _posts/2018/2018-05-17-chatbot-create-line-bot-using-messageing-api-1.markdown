@@ -35,14 +35,14 @@ Chatbot為近年最為火紅的應用服務，越多人使用的平台，越能�
    ![chatbot-create-line-bot-using-messageing-api-05](/images/2018/05/chatbot-create-line-bot-using-messageing-api-05.png)
   - Controllers資料夾中的LINEBotController就是要註冊我們在LINE Developers Console中Channel Settins Webhook。
   - CloudStorage資料夾中定義存取Media資源以及事件的紀錄。
-  - Root下的LineBotApp.cs，就是我們撰寫傳接LINE Messaging API的位置，
+  - Root下的LineBotApp.cs，就是我們撰寫傳接LINE Messaging API的位置。
 3. Web.config設定  
   以下由相關網站取得資料填入
-  ```HTML
+  ```XML
     <appSettings>
-      <add key="ChannelSecret" value="由LINE Console取得(Channel secret)" />
-      <add key="ChannelAccessToken" value="由LINE Console取得(Channel accesss token)" />
-      <add key="StorageConnectionString" value="由Azure Storage Account取得連接字串" />
+      <add key="ChannelSecret" value="由LINE Developers Console取得(Channel secret)" />
+      <add key="ChannelAccessToken" value="由LINE Developers Console取得(Channel accesss token)" />
+      <add key="StorageConnectionString" value="由Azure Storage Account取得連線字串" />
     </appSettings>
   ```
 4. 建立WebAPI網站
@@ -57,7 +57,9 @@ Chatbot為近年最為火紅的應用服務，越多人使用的平台，越能�
 1. 掃描LINE Developers Console中Channel所提供的QR code，加入有後，開始傳遞訊息。
 2. 加入好友會有初始訊息，可以在LINE Developers Console中設定
   - Auto-reply messages.
-  - Greeting messages
-3. 傳遞文字，LINE Bot會回您相同的文字，傳遞貼圖，LINE Bot回傳您隨機抽樣的貼圖，傳遞Media，LINE Bot回傳您儲存在Azure Blob的位置。
+  - Greeting messages  
+  ![chatbot-create-line-bot-using-messageing-api-08](/images/2018/05/chatbot-create-line-bot-using-messageing-api-08.png)
+3. 傳遞文字，LINE Bot會回您相同的文字，傳遞貼圖，LINE Bot回傳您隨機抽樣的貼圖，傳遞Media，LINE Bot回傳您儲存在Azure Blob的位置。  
+   ![chatbot-create-line-bot-using-messageing-api-09](/images/2018/05/chatbot-create-line-bot-using-messageing-api-09.png)
 
 Done:metal:
