@@ -30,6 +30,7 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   gem 'jekyll-algolia'
   gem "jekyll-compose"
+  gem "jekyll-include-cache"
 end
 
 # if OS.windows?
