@@ -16,6 +16,9 @@ categories: travel
 ### 躺椅區
 ![躺椅區](/images/2018/10/travel-2018-10-miaoli-taichung-02.jpg)
 
+### 家庭聚會
+![](/images/2018/10/travel-2018-10-miaoli-taichung-12.jpg)
+
 ### 樹間的藍天白雲
 ![樹間的藍天白雲](/images/2018/10/travel-2018-10-miaoli-taichung-03.jpg)
 
