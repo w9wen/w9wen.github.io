@@ -22,11 +22,12 @@ categories: travel
 ### 樹間的藍天白雲
 ![樹間的藍天白雲](/images/2018/10/travel-2018-10-miaoli-taichung-03.jpg)
 
-### 完成滑草戰鬥
-![完成滑草戰鬥](/images/2018/10/travel-2018-10-miaoli-taichung-04.jpg)
+### 戰鬥滑草
+{% include youtubePlayer.html vId='xng3ZhJVGLw' %}
 
-<!-- ### 滑草
-Ready for video -->
+
+### 完成滑草
+![完成滑草戰鬥](/images/2018/10/travel-2018-10-miaoli-taichung-04.jpg)
 
 ### 全家合照
 ![全家合照](/images/2018/10/travel-2018-10-miaoli-taichung-05.jpg)
