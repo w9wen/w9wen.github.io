@@ -117,17 +117,22 @@ Reference [HERE](https://github.com/nwinkler/atom-keyboard-shortcuts#window-mana
 | ⌃ + ⇧ + M | Ctrl + Shift + M | Toogle Preview                |
 | ⌘ + \     | Ctrl + \         | Toggles Atom's file Tree View |
 
-### Window management
+## Visual Studio Code
 
-| Mac                           | Windows                             | To do this |
-|-------------------------------|-------------------------------------|------------|
-| ⌘ + K, ⌘ + up/down/left/right | Ctrl + K, Ctrl + up/down/left/right | Focus Pane |
+Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
 
-### PlatformIO IDE Terminal
+### General
 
-Mac | Windows  | To do this
-----|----------|-----------
-    | Ctrl + ` | Toggle
+| Mac       | Windows          | To do this                    |
+|-----------|------------------|-------------------------------|
+| ⇧ + ⌘ + P |                  | Show Command Palette          |
+
+### Display
+
+| Mac       | Windows          | To do this                    |
+|-----------|------------------|-------------------------------|
+| ⌘ + B     | Ctrl + B         | Toggle Sidebar visibility     |
+
 
 ## SourceTree
 
