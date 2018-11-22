@@ -7,6 +7,8 @@ categories: travel
 
 ## 2018-11-17(六) 第一天、飛向藍色Okinawa
 
+{% include image-gallery.html folder="/images/2018/11/17" %}
+
 ### 20:25 抵達
 **豬肉蛋飯糰 - ポークたまごおにぎり**  
 空港1F店｜098-996-3588 | 07:00 ~ 22:00  
