@@ -27,6 +27,9 @@ categories: travel
 **榮町超市 - りうぼう（RYUBO）**
 
 ##2018-11-18(二) 第二天、沖繩南部  
+
+{% include image-gallery.html folder="/images/2018/11/18" %}
+
 ### 09:00 OTS到大廳接送至泊取車 
 購買美麗海洋館門票
 
