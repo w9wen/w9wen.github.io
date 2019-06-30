@@ -1,0 +1,613 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.3 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[Chatbot] 使用Messaging API(C# SDK)建立LINE Bot WebAPI(一) - w9wen</title>
+<meta name="description" content="緣起Chatbot為近年最為火紅的應用服務，越多人使用的平台，越能有開發多元化層面的效果；Facebook、Skype均有提供Chatbot的開發介面，而且Microsoft Azure也提供了Bot Services提供跨平台應用，但在東亞、東南亞使用者眾的LINE平台並沒有整合進來，需要單獨做串接。">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="w9wen">
+<meta property="og:title" content="[Chatbot] 使用Messaging API(C# SDK)建立LINE Bot WebAPI(一)">
+<meta property="og:url" content="http://localhost:4000/chatbot-create-line-bot-using-messageing-api-1/">
+
+
+  <meta property="og:description" content="緣起Chatbot為近年最為火紅的應用服務，越多人使用的平台，越能有開發多元化層面的效果；Facebook、Skype均有提供Chatbot的開發介面，而且Microsoft Azure也提供了Bot Services提供跨平台應用，但在東亞、東南亞使用者眾的LINE平台並沒有整合進來，需要單獨做串接。">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-05-17T06:41:00+08:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/chatbot-create-line-bot-using-messageing-api-1/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "William Wen",
+      "url": "http://localhost:4000/",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="w9wen Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">w9wen</a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/year-archive/">Posts</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/collection-archive/">Documents</a>
+            </li>
+</ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/w9wen.png" alt="William Wen" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">William Wen</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Take It From The World, Share It to The World.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Taipei, Taiwan</span>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[Chatbot] 使用Messaging API(C# SDK)建立LINE Bot WebAPI(一)">
+    <meta itemprop="description" content="緣起Chatbot為近年最為火紅的應用服務，越多人使用的平台，越能有開發多元化層面的效果；Facebook、Skype均有提供Chatbot的開發介面，而且Microsoft Azure也提供了Bot Services提供跨平台應用，但在東亞、東南亞使用者眾的LINE平台並沒有整合進來，需要單獨做串接。">
+    <meta itemprop="datePublished" content="May 17, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">[Chatbot] 使用Messaging API(C# SDK)建立LINE Bot WebAPI(一)
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="緣起">緣起</h2>
+<p>Chatbot為近年最為火紅的應用服務，越多人使用的平台，越能有開發多元化層面的效果；Facebook、Skype均有提供Chatbot的開發介面，而且Microsoft Azure也提供了<a href="https://azure.microsoft.com/zh-tw/services/bot-service/">Bot Services</a>提供跨平台應用，但在東亞、東南亞使用者眾的LINE平台並沒有整合進來，需要單獨做串接。</p>
+
+<p><img class="emoji" title=":beginner:" alt=":beginner:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f530.png" height="20" width="20"> LINE提供開發者打造LINE Chatbot已有一段時間，去年BOT API改名為LINE Messaging API以符合應用情境，畢竟建立Bot核心在於WebAPI的開發端。</p>
+
+<p>🚀LINE Messaging API使用RESTful的通訊格式，雖然知道，使用原生的API最為安全可靠，但是最後還是被 😩<strong>懶惰</strong> 擊垮，開始了尋覓SDK的生涯；<a href="https://developers.line.me/en/docs/messaging-api/line-bot-sdk/">LINE官方提供的SDK</a>，有<code class="highlighter-rouge">Java</code>、<code class="highlighter-rouge">PHP</code>、等，但沒有提供<code class="highlighter-rouge">C#</code>(沒關係，已經習慣了)，但還是有社群善心人事提供了C#版本。</p>
+
+<blockquote>
+  <p>官網推薦了兩個社群開發的C# SDK，也有台灣人自己提供的版本，當然沒辦法馬上比較出優劣，只能用Github上的更新日期以及提供的Template來決定了。
+我這邊是使用<a href="https://github.com/pierre3/LineMessagingApi">pierre3/LineMessagingApi </a>這個版本的SDK，若想要使用SDK更深入了解學習，我特別推薦<a href="http://studyhost.blogspot.tw/2016/05/linebot-1-clinebot.html">.NET Walker所撰寫的LineBot系列</a></p>
+</blockquote>
+
+<h2 id="目標">目標</h2>
+<p>建立的LINE Chatbot可以加入好友，並且進行初步訊息的溝通；分為幾個步驟，以下圖(取自於<a href="https://developers.line.me/en/docs/messaging-api/overview/">LINE Developer</a>)來說，第一步先要在Messaging API建立帳號、設定一個LINE Channel，然後建立一個WebAPI(<code class="highlighter-rouge">YOUR SYSTEM</code>)上面建立Webhook的應用程式。</p>
+
+<p><img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-01.png" alt="chatbot-create-line-bot-using-messageing-api-01"></p>
+
+<h3 id="line-messaging-api">LINE Messaging API</h3>
+<p>首先要先申請帳號加入LINE Developer，以此帳號登入Console後，要建立一個Provider，請參考<a href="https://developers.line.me/en/docs/messaging-api/overview/">LINE Developer 官方說明</a>，中文則推薦<a href="http://studyhost.blogspot.tw/2016/05/linebot-1-clinebot.html">.NET Walker的Line Bot申請流程</a></p>
+
+<p><img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-02.png" alt="chatbot-create-line-bot-using-messageing-api-02"></p>
+
+<h3 id="使用linemessagingapi-sdk範本建立webapi">使用LineMessagingApi SDK範本建立WebAPI</h3>
+<p>我們現在要來做圖示的<strong>YOUR SYSTEM</strong>這一段</p>
+
+<p><img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-03.png" alt="chatbot-create-line-bot-using-messageing-api-03">。</p>
+<ol>
+  <li>請先下載安裝<a href="https://marketplace.visualstudio.com/items?itemName=pierre3.LINEBotCSharpTemplate">LINE Bot C# Template</a>；這位日本好手已經是雲端能者，範本已經結合Azure Storage Account，也提供了Azure Function的範本。</li>
+  <li>建立LINEBotApplication WebAPI
+    <ul>
+      <li>在Visual Studio，建立新專案，找到Cloud分類，往下拉就可以看到三個LINE Bot的範本，選擇LINEBotApplication。<br>
+  <img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-04.png" alt="chatbot-create-line-bot-using-messageing-api-04">
+</li>
+      <li>這是一個WebAPI的專案結構<br>
+<img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-05.png" alt="chatbot-create-line-bot-using-messageing-api-05">
+</li>
+      <li>Controllers資料夾中的LINEBotController就是要註冊我們在LINE Developers Console中Channel Settins Webhook。</li>
+      <li>CloudStorage資料夾中定義存取Media資源以及事件的紀錄。</li>
+      <li>Root下的LineBotApp.cs，就是我們撰寫傳接LINE Messaging API的位置。</li>
+    </ul>
+  </li>
+  <li>Web.config設定<br>
+  以下由相關網站取得資料填入
+    <pre><code class="language-XML"> &lt;appSettings&gt;
+   &lt;add key="ChannelSecret" value="由LINE Developers Console取得(Channel secret)" /&gt;
+   &lt;add key="ChannelAccessToken" value="由LINE Developers Console取得(Channel accesss token)" /&gt;
+   &lt;add key="StorageConnectionString" value="由Azure Storage Account取得連線字串" /&gt;
+ &lt;/appSettings&gt;
+</code></pre>
+  </li>
+  <li>建立WebAPI網站
+    <ul>
+      <li>最快的方式是將網站發布到Azure Web App。</li>
+      <li>在LINE Developer Console啟用Webhooks，並將Azure Web App的WebAPI位置設定在Webhook URL，SSL是必須的，Azure Web App好處是預設啟用方便開發人員進行部署，只要將URL改為https即可(不建議產品類型)<br>
+  <img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-06.png" alt="chatbot-create-line-bot-using-messageing-api-06">
+</li>
+    </ul>
+  </li>
+</ol>
+
+<p>完成了，只要將LINE Bot加入好友，就可以對話了~~ ，這個Template做得太貼心了💥。</p>
+
+<h3 id="測試">測試</h3>
+<p><img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-07.png" alt="/chatbot-create-line-bot-using-messageing-api-07"></p>
+<ol>
+  <li>掃描LINE Developers Console中Channel所提供的QR code，加入有後，開始傳遞訊息。</li>
+  <li>加入好友會有初始訊息，可以在LINE Developers Console中設定
+    <ul>
+      <li>Auto-reply messages.</li>
+      <li>Greeting messages<br>
+  <img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-08.png" alt="chatbot-create-line-bot-using-messageing-api-08">
+</li>
+    </ul>
+  </li>
+  <li>傳遞文字，LINE Bot會回您相同的文字，傳遞貼圖，LINE Bot回傳您隨機抽樣的貼圖，傳遞Media，LINE Bot回傳您儲存在Azure Blob的位置。<br>
+<img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-09.png" alt="chatbot-create-line-bot-using-messageing-api-09">
+</li>
+</ol>
+
+<p>Done<img class="emoji" title=":metal:" alt=":metal:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f918.png" height="20" width="20"></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-05-17T06:41:00+08:00">May 17, 2018</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BChatbot%5D+%E4%BD%BF%E7%94%A8Messaging+API%28C%23+SDK%29%E5%BB%BA%E7%AB%8BLINE+Bot+WebAPI%28%E4%B8%80%29%20http%3A%2F%2Flocalhost%3A4000%2Fchatbot-create-line-bot-using-messageing-api-1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fchatbot-create-line-bot-using-messageing-api-1%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A4000%2Fchatbot-create-line-bot-using-messageing-api-1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/jekyll/ruby/sass/solved-update-ruby-sass-jeklly-compile-error/" class="pagination--pager" title="解決更新Ruby Sass後Jeklly編譯的錯誤
+">Previous</a>
+    
+    
+      <a href="/travel/travel-miaoli-taichung/" class="pagination--pager" title="[Travel] 2018-10 苗栗、台中
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/travel/travel-okinawa/" rel="permalink">[日本] 2018-11 沖繩遊
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+  準備好行囊，攜家帶眷創造回憶
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/travel/travel-miaoli-taichung/" rel="permalink">[Travel] 2018-10 苗栗、台中
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">10月的親子旅遊
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/jekyll/ruby/sass/solved-update-ruby-sass-jeklly-compile-error/" rel="permalink">解決更新Ruby Sass後Jeklly編譯的錯誤
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">更新Ruby的套件
+gem update bundle
+
+只要更新到sass的套件，都會出現下列的錯誤
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/iisexpress/cross-platform-add-the-iis-express-setting-for-intranet-access/" rel="permalink">[Cross Platform] 設定IISExpress將網站分享至內部網路存取
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">緣起
+開發跨平台專案，時常需要同時了解Server與Client互動的關係與結果，過去，Server端一定要完成API的設計與開發，Client端才能依據文件與端口進行開發與測試，在Visaul Studio的跨平台方案，將Server與Client放在一起，本篇將介紹如何在內網的手機App存取內網的Server...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+<input type="search" id="search" aria-placeholder="Enter your search term..." class="search-input" tabindex="-1" placeholder="Enter your search term...">
+    <div id="results" class="results"></div>
+</div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2019 William Wen. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/chatbot-create-line-bot-using-messageing-api-1/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/chatbot-create-line-bot-using-messageing-api-1"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://w9wen.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

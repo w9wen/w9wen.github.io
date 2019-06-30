@@ -1,0 +1,616 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.3 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[Cross Platform] 設定IISExpress將網站分享至內部網路存取 - w9wen</title>
+<meta name="description" content="緣起開發跨平台專案，時常需要同時了解Server與Client互動的關係與結果，過去，Server端一定要完成API的設計與開發，Client端才能依據文件與端口進行開發與測試，在Visaul Studio的跨平台方案，將Server與Client放在一起，本篇將介紹如何在內網的手機App存取內網的Server，以便快速除錯平衡兩邊的開發。">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="w9wen">
+<meta property="og:title" content="[Cross Platform] 設定IISExpress將網站分享至內部網路存取">
+<meta property="og:url" content="http://localhost:4000/iisexpress/cross-platform-add-the-iis-express-setting-for-intranet-access/">
+
+
+  <meta property="og:description" content="緣起開發跨平台專案，時常需要同時了解Server與Client互動的關係與結果，過去，Server端一定要完成API的設計與開發，Client端才能依據文件與端口進行開發與測試，在Visaul Studio的跨平台方案，將Server與Client放在一起，本篇將介紹如何在內網的手機App存取內網的Server，以便快速除錯平衡兩邊的開發。">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-05-10T00:00:00+08:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/iisexpress/cross-platform-add-the-iis-express-setting-for-intranet-access/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "William Wen",
+      "url": "http://localhost:4000/",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="w9wen Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">w9wen</a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/year-archive/">Posts</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/collection-archive/">Documents</a>
+            </li>
+</ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/w9wen.png" alt="William Wen" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">William Wen</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Take It From The World, Share It to The World.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Taipei, Taiwan</span>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[Cross Platform] 設定IISExpress將網站分享至內部網路存取">
+    <meta itemprop="description" content="緣起開發跨平台專案，時常需要同時了解Server與Client互動的關係與結果，過去，Server端一定要完成API的設計與開發，Client端才能依據文件與端口進行開發與測試，在Visaul Studio的跨平台方案，將Server與Client放在一起，本篇將介紹如何在內網的手機App存取內網的Server，以便快速除錯平衡兩邊的開發。">
+    <meta itemprop="datePublished" content="May 10, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">[Cross Platform] 設定IISExpress將網站分享至內部網路存取
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h3 id="緣起">緣起</h3>
+<p>開發跨平台專案，時常需要同時了解Server與Client互動的關係與結果，過去，Server端一定要完成API的設計與開發，Client端才能依據文件與端口進行開發與測試，在Visaul Studio的跨平台方案，將Server與Client放在一起，本篇將介紹如何在內網的手機App存取內網的Server，以便快速除錯平衡兩邊的開發。</p>
+
+<h3 id="目標">目標</h3>
+<p>時常會需要Server端與Client端同時執行方便除錯與預覽，在Visual Studio開發時，預設會使用IIS Express提供虛擬網站進行執行時期的偵錯，設定環境讓Client端包含手機存取IISExpress。</p>
+
+<h3 id="不適用">不適用</h3>
+<p>本章內容以內網固定IP的方式進行設定，當設定進行版控時，另一位開發者的電腦將不適用此設定，會造成專案無法載入的問題。</p>
+
+<h4 id="網路環境設置">網路環境設置</h4>
+<ul>
+  <li>取得IISExpress執行時期的Port，在防火牆開啟規則讓遠端的Client可以通過
+    <ul>
+      <li>開啟Visual Studio 網站專案屬性頁，在Web的頁籤中，找到Project Url，這邊有預設的Port號。
+ <img src="/images/2018/05/cross-platform-add-the-iis-express-setting-for-intranet-access-02.png" alt="cross-platform-add-the-iis-express-setting-for-intranet-access-02">
+</li>
+      <li>開啟防火牆設定，選取進階設定，在<strong>輸入規則</strong>新增規則設定本機連接埠。
+<img src="/images/2018/05/cross-platform-add-the-iis-express-setting-for-intranet-access-03.png" alt="cross-platform-add-the-iis-express-setting-for-intranet-access-03">
+</li>
+    </ul>
+  </li>
+  <li>開啟可供存取的固定IP位址
+    <ul>
+      <li>取得本機聯網的IPv4位址
+        <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>ipconfig
+</code></pre></div>        </div>
+        <p><img src="/images/2018/05/cross-platform-add-the-iis-express-setting-for-intranet-access-01.png" alt="cross-platform-add-the-iis-express-setting-for-intranet-access-01"></p>
+      </li>
+    </ul>
+
+    <p>原始網站預設的位址為<code class="highlighter-rouge">localhost</code>，要改為固定IP，要先改applicationhost的設定，否則直接在專案改會出錯，無法更動。</p>
+    <ul>
+      <li>開啟<code class="highlighter-rouge">applicationhost.config</code>有兩種方式，一種是執行網站後，由IISExpress的快速啟動列開啟，另一種是直接在方案下找到.vs -&gt; config開啟後進行編輯。</li>
+      <li>找到網站設定的<code class="highlighter-rouge">tag</code>，因為有可能這個專案被重複建立了幾次，因此會有id作為辨認，可以直接使用Port來找到正確的設定位置。</li>
+      <li>將<code class="highlighter-rouge">localhost</code>，改為IP位址後存檔
+<img src="/images/2018/05/cross-platform-add-the-iis-express-setting-for-intranet-access-04.png" alt="cross-platform-add-the-iis-express-setting-for-intranet-access-04">
+</li>
+    </ul>
+  </li>
+  <li>此時將網站屬性的Project Url由localhost改為固定IP即可</li>
+</ul>
+
+<h3 id="測試">測試</h3>
+<p>由手機端App的網頁開啟本機的IISExpress固定IP網站，理論上只要Client端的瀏覽器可以存取網站，開發的App或網頁，都可以存取網站的WebAPI。</p>
+<h4 id="執行aspnet專案">執行ASP.NET專案</h4>
+<ul>
+  <li>很酷的，現在增強了Chrome做Debug瀏覽器的功能
+<img src="/images/2018/05/cross-platform-add-the-iis-express-setting-for-intranet-access-05.png" alt="cross-platform-add-the-iis-express-setting-for-intranet-access-05">
+</li>
+  <li>執行出固定IP與Port的網站(馬賽克搞得像國王的新衣嗎?哈，還是要保持資訊安全的習慣😄)
+<img src="/images/2018/05/cross-platform-add-the-iis-express-setting-for-intranet-access-06.png" alt="cross-platform-add-the-iis-express-setting-for-intranet-access-06">
+    <h4 id="macos-safari">[macOS Safari]</h4>
+    <p><img src="/images/2018/05/cross-platform-add-the-iis-express-setting-for-intranet-access-07.png" alt="cross-platform-add-the-iis-express-setting-for-intranet-access-07"></p>
+    <h4 id="iphone-safari">[iPhone Safari]</h4>
+    <p><img src="/images/2018/05/cross-platform-add-the-iis-express-setting-for-intranet-access-08.png" alt="cross-platform-add-the-iis-express-setting-for-intranet-access-08"></p>
+    <h4 id="android-google-chrome">[Android Google Chrome]</h4>
+    <p><img src="/images/2018/05/cross-platform-add-the-iis-express-setting-for-intranet-access-09.png" alt="cross-platform-add-the-iis-express-setting-for-intranet-access-09"></p>
+  </li>
+</ul>
+
+<p>Done!<img class="emoji" title=":metal:" alt=":metal:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f918.png" height="20" width="20"></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#iisexpress" class="page__taxonomy-item" rel="tag">IISExpress</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-05-10T00:00:00+08:00">May 10, 2018</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BCross+Platform%5D+%E8%A8%AD%E5%AE%9AIISExpress%E5%B0%87%E7%B6%B2%E7%AB%99%E5%88%86%E4%BA%AB%E8%87%B3%E5%85%A7%E9%83%A8%E7%B6%B2%E8%B7%AF%E5%AD%98%E5%8F%96%20http%3A%2F%2Flocalhost%3A4000%2Fiisexpress%2Fcross-platform-add-the-iis-express-setting-for-intranet-access%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fiisexpress%2Fcross-platform-add-the-iis-express-setting-for-intranet-access%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A4000%2Fiisexpress%2Fcross-platform-add-the-iis-express-setting-for-intranet-access%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/xamarin/xamarin.forms/plugin/install-media-plugin-access-xamarin-native/" class="pagination--pager" title="[Xamarin.Forms] 安裝Media Plugin跨平台存取相機或相簿
+">Previous</a>
+    
+    
+      <a href="/jekyll/ruby/sass/solved-update-ruby-sass-jeklly-compile-error/" class="pagination--pager" title="解決更新Ruby Sass後Jeklly編譯的錯誤
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/travel/travel-okinawa/" rel="permalink">[日本] 2018-11 沖繩遊
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+  準備好行囊，攜家帶眷創造回憶
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/travel/travel-miaoli-taichung/" rel="permalink">[Travel] 2018-10 苗栗、台中
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">10月的親子旅遊
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/chatbot-create-line-bot-using-messageing-api-1/" rel="permalink">[Chatbot] 使用Messaging API(C# SDK)建立LINE Bot WebAPI(一)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">緣起
+Chatbot為近年最為火紅的應用服務，越多人使用的平台，越能有開發多元化層面的效果；Facebook、Skype均有提供Chatbot的開發介面，而且Microsoft Azure也提供了Bot Services提供跨平台應用，但在東亞、東南亞使用者眾的LINE平台並沒有整合進來，需要單獨做串接。
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/jekyll/ruby/sass/solved-update-ruby-sass-jeklly-compile-error/" rel="permalink">解決更新Ruby Sass後Jeklly編譯的錯誤
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">更新Ruby的套件
+gem update bundle
+
+只要更新到sass的套件，都會出現下列的錯誤
+
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+<input type="search" id="search" aria-placeholder="Enter your search term..." class="search-input" tabindex="-1" placeholder="Enter your search term...">
+    <div id="results" class="results"></div>
+</div>
+
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2019 William Wen. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/iisexpress/cross-platform-add-the-iis-express-setting-for-intranet-access/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/iisexpress/cross-platform-add-the-iis-express-setting-for-intranet-access"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://w9wen.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>
