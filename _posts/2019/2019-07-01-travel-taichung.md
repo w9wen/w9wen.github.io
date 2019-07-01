@@ -19,9 +19,11 @@ categories: travel
 * 台中市大安區北汕路86巷1號
 * 2019-06-22 正式開放
 * 游泳池開放時間：08:00~17:00 周一公休
-* 參考網站：https://niniandblue.com/blog/post/daan-paradise
+* 參考網站：
+    1. https://niniandblue.com/blog/post/daan-paradise
+    2. https://blog.owlting.com/2019/06/26/2019-taichung-music-festival/
 * 備有飲水機以及充氣機
-* 攜帶：玩沙工具、充氣玩具
+* 攜帶：玩沙工具、充氣玩具、防曬、雨具
 * 預計玩早上
 
 ## 2019-07-08 (日)
