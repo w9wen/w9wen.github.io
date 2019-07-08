@@ -121,21 +121,35 @@ Reference [HERE](https://github.com/nwinkler/atom-keyboard-shortcuts#window-mana
 
 Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
 
+
 ### General
 
 | Mac       | Windows          | To do this                    |
 |-----------|------------------|-------------------------------|
-| ⇧ + ⌘ + P |                  | Show Command Palette          |
+| ⇧ + ⌘ + P |   Ctrl + Shift + P   | Show Command Palette     |
 
-### Display
 
 | Mac       | Windows          | To do this                    |
 |-----------|------------------|-------------------------------|
-| ⌘ + B     | Ctrl + B         | Toggle Sidebar visibility     |
+|           | Ctrl + B         | Toggle Sidebar visibility     |
+|           | Ctrl + Shift + E | Toggle File Explorer visibility     |
 
+### Jekyll Compose
+
+| Use this command         | To do this                    |
+|-----------|------------------|-------------------------------|
+|   jekyll draft "_[new draft]_"   | Create new draft     |
+|   jekyll publist _draft/ _[draft].md_ --date 2019-07-09   | Publish your draft     |
 
 ## SourceTree
 
 | Mac             | Windows          | To do this |
 |-----------------|------------------|------------|
 | Shift + Cmd + C | Ctrl + Shift + C | Commit     |
+
+## Microsoft Project
+
+Press this key | To do this 
+---------|----------
+Insert  | Insert Task
+Shift + Space, Delete | Delete Task
