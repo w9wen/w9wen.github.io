@@ -74,10 +74,33 @@ Reference [Here](https://support.microsoft.com/en-us/help/12445/windows-keyboard
 
 | Mac | Windows           | To do this     |
 |-----|-------------------|----------------|
+|     | Ctrl + F5        | Run without Debugging |
 |     | Shift + F5        | Stop Debugging |
 |     | Ctrl + Shift + F5 | Restart        |
 |     | F11               | Step Into      |
 |     | F10               | Step Over      |
+
+### Search
+
+| Mac | Windows           | To do this     |
+|-----|-------------------|----------------|
+|     | Ctrl + ;        | Solution Explorer search |
+
+### C# Editor
+
+| Mac | Windows           | To do this     |
+|-----|-------------------|----------------|
+|     | Ctrl + .  (Alt + Enter)      | Quick Actions and Refactorings |
+|     | Ctrl + J     | List Members |
+|     | Ctrl + U      | Make Lowercase |
+|     | Ctrl + Shift + U      | Make Uppercase |
+
+### Solution
+
+| Mac | Windows           | To do this     |
+|-----|-------------------|----------------|
+|     | Ctrl + [ 、 S     | Sync With Active Document |
+
 
 ## Eclipse
 
@@ -103,7 +126,7 @@ Reference [Here](https://shortcutworld.com/en/Eclipse/win/all#link_11)<!-- {:tar
 |     | Ctrl + Click       | Hyperlink                         |
 |     | Ctrl + Alt + Click | Step Into Hyperlink               |
 
-## Atom
+## Atom - the tears of the time
 
 Reference [HERE](https://github.com/nwinkler/atom-keyboard-shortcuts#window-management)
 * 組合快速鍵以此處為準
@@ -128,11 +151,19 @@ Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcut
 |-----------|------------------|-------------------------------|
 | ⇧ + ⌘ + P |   Ctrl + Shift + P   | Show Command Palette     |
 
+### View
 
 | Mac       | Windows          | To do this                    |
 |-----------|------------------|-------------------------------|
 |           | Ctrl + B         | Toggle Sidebar visibility     |
 |           | Ctrl + Shift + E | Toggle File Explorer visibility     |
+
+### Markdown
+
+| Mac       | Windows          | To do this                    |
+|-----------|------------------|-------------------------------|
+|           | Ctrl + K     V | Open Preview to the Side    |
+
 
 ### Jekyll Compose
 
