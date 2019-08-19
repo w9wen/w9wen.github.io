@@ -70,6 +70,15 @@ Reference [Here](https://support.microsoft.com/en-us/help/12445/windows-keyboard
 
 ## Visual Studio
 
+### View
+| Mac | Windows           | To do this     |
+|-----|-------------------|----------------|
+|     | Ctrl +  Alt + L        |   Solution Explorer      |
+|     | Ctrl + \, Ctrl + M        |   Team Explorer      |
+
+
+
+
 ### Run and Debug
 
 | Mac | Windows           | To do this     |
@@ -145,6 +154,12 @@ Reference [HERE](https://github.com/nwinkler/atom-keyboard-shortcuts#window-mana
 Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
 
 
+### Display
+| Mac       | Windows          | To do this                    |
+|-----------|------------------|-------------------------------|
+|           |   Ctrl + `   | Toggle Integrated Terminal     |
+
+
 ### General
 
 | Mac       | Windows          | To do this                    |
@@ -157,12 +172,13 @@ Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcut
 |-----------|------------------|-------------------------------|
 |           | Ctrl + B         | Toggle Sidebar visibility     |
 |           | Ctrl + Shift + E | Toggle File Explorer visibility     |
+|           | Ctrl + Shift + G | Toggle Git     |
 
 ### Markdown
 
 | Mac       | Windows          | To do this                    |
 |-----------|------------------|-------------------------------|
-|           | Ctrl + K     V | Open Preview to the Side    |
+|           | Ctrl + K, V | Open Preview to the Side    |
 
 
 ### Jekyll Compose
