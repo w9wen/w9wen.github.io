@@ -1,0 +1,542 @@
+I"�)<h1 id="welcome-to-my-shortcuts-libraries">Welcome to my shortcuts libraries.</h1>
+
+<p>The reason is I work in multiple platform for very short time, I cannot remember many skill while I changed the tool. The shortcuts of the tool is the most important feature for the user, I think if there have one place let me reference, and I can quickly use them no effort.</p>
+
+<h2 id="mac-os">Mac OS</h2>
+<p>Reference <a href="https://support.apple.com/en-us/HT204434" title="Mac accessibility shortcuts">Here</a><!-- {:target="_blank"} --></p>
+
+<ul>
+  <li>Command ⌘</li>
+  <li>Option ⌥</li>
+  <li>Shift  ⇧</li>
+  <li>Control ⌃</li>
+</ul>
+
+<h3 id="mission-control">Mission Control</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Press this key</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>⌃ + Left arrow</td>
+      <td>Move left a space</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="xcode">Xcode</h2>
+<p>Reference <a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/xcode_help-command_shortcuts/MenuCommands/MenuCommands014.html">Here</a><!-- {:target="_blank"} --></p>
+
+<h3 id="table-1-3--edit-menu-command-shortcuts">Table 1-3  Edit menu command shortcuts</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Press this key</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>⇧ + ⌘ + O</td>
+      <td>Open Quickly…</td>
+    </tr>
+    <tr>
+      <td>⌥ + ⌘ + L</td>
+      <td>Filter in Library</td>
+    </tr>
+    <tr>
+      <td>⇧ + ⌘ + F</td>
+      <td>Find in Workspace…</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="table-1-5--navigate-menu-command-shortcuts">Table 1-5  Navigate menu command shortcuts</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Press this key</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>⌘ + L</td>
+      <td>Reveal in Project Navigator</td>
+    </tr>
+    <tr>
+      <td>⌘ + ‘</td>
+      <td>Jump to Next Issue</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="table-1-7-product-menu-command-shortcuts">Table 1-7 Product menu command shortcuts</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Press this key</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>⌘ + R</td>
+      <td>Run</td>
+    </tr>
+    <tr>
+      <td>⌘ + B</td>
+      <td>Build</td>
+    </tr>
+    <tr>
+      <td>⇧ + ⌘ + K</td>
+      <td>Clean</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="windows-10">Windows 10</h2>
+
+<p>Reference <a href="https://support.microsoft.com/en-us/help/12445/windows-keyboard-shortcuts" title="Keyboard shortcuts in Windows">Here</a><!-- {:target="_blank"} --></p>
+
+<h3 id="virtual-desktops-keyboard-shortcuts">Virtual desktops keyboard shortcuts</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Press this key</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Windows logo key + Tab</td>
+      <td>Open Task view</td>
+    </tr>
+    <tr>
+      <td>Windows logo key + Ctrl + D</td>
+      <td>Add a virtual desktop</td>
+    </tr>
+    <tr>
+      <td>Windows logo key + Ctrl + Right arrow</td>
+      <td>Switch between virtual desktops you’ve created on the right</td>
+    </tr>
+    <tr>
+      <td>Windows logo key + Ctrl + Left arrow</td>
+      <td>Switch between virtual desktops you’ve created on the right</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="file-explorer-keyboard-shortcuts">File Explorer keyboard shortcuts</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Press this key</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Alt + D</td>
+      <td>Select the address bar</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="visual-studio">Visual Studio</h2>
+
+<h3 id="view">View</h3>
+<p>| Mac | Windows           | To do this     |
+|—–|——————-|—————-|
+|     | Ctrl +  Alt + L        |   Solution Explorer      |
+|     | Ctrl + \, Ctrl + M        |   Team Explorer      |</p>
+
+<h3 id="run-and-debug">Run and Debug</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mac</th>
+      <th>Windows</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>Ctrl + F5</td>
+      <td>Run without Debugging</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Shift + F5</td>
+      <td>Stop Debugging</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Ctrl + Shift + F5</td>
+      <td>Restart</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>F11</td>
+      <td>Step Into</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>F10</td>
+      <td>Step Over</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="search">Search</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mac</th>
+      <th>Windows</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>Ctrl + ;</td>
+      <td>Solution Explorer search</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="c-editor">C# Editor</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mac</th>
+      <th>Windows</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>Ctrl + .  (Alt + Enter)</td>
+      <td>Quick Actions and Refactorings</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Ctrl + J</td>
+      <td>List Members</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Ctrl + U</td>
+      <td>Make Lowercase</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Ctrl + Shift + U</td>
+      <td>Make Uppercase</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="solution">Solution</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mac</th>
+      <th>Windows</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>Ctrl + [ 、 S</td>
+      <td>Sync With Active Document</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="eclipse">Eclipse</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mac</th>
+      <th>Windows</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>F3</td>
+      <td>Open Declaration</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Ctrl + F6</td>
+      <td>Next Editor</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="run-and-debug-1">Run and Debug</h3>
+
+<p>Reference <a href="https://shortcutworld.com/en/Eclipse/win/all#link_11">Here</a><!-- {:target="_blank"} --></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mac</th>
+      <th>Windows</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>Ctrl + F11</td>
+      <td>Run (Save and launch application)</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>F11</td>
+      <td>Debug</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>F5</td>
+      <td>Step Into</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>F6</td>
+      <td>Step Over (line by line)</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>F7</td>
+      <td>Step Return</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>F8</td>
+      <td>Resume</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Ctrl + F5</td>
+      <td>Step Into Selection</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Ctrl + R</td>
+      <td>Run to Line</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Ctrl + Click</td>
+      <td>Hyperlink</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Ctrl + Alt + Click</td>
+      <td>Step Into Hyperlink</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="atom---the-tears-of-the-time">Atom - the tears of the time</h2>
+
+<p>Reference <a href="https://github.com/nwinkler/atom-keyboard-shortcuts#window-management">HERE</a></p>
+<ul>
+  <li>組合快速鍵以此處為準</li>
+</ul>
+
+<h3 id="general">General</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mac</th>
+      <th>Windows</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>⌘ + ,</td>
+      <td>Ctrl + ,</td>
+      <td>Preferences/Settings</td>
+    </tr>
+    <tr>
+      <td>⇧ +⌘ + P</td>
+      <td>Shift + Ctrl + P</td>
+      <td>Command Palette</td>
+    </tr>
+    <tr>
+      <td>⌃ + ⇧ + M</td>
+      <td>Ctrl + Shift + M</td>
+      <td>Toogle Preview</td>
+    </tr>
+    <tr>
+      <td>⌘ + \</td>
+      <td>Ctrl + \</td>
+      <td>Toggles Atom’s file Tree View</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="visual-studio-code">Visual Studio Code</h2>
+
+<p>Reference <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf">macOS HERE</a></p>
+
+<h3 id="display">Display</h3>
+<p>| Mac       | Windows          | To do this                    |
+|———–|——————|——————————-|
+|           |   Ctrl + `   | Toggle Integrated Terminal     |</p>
+
+<h3 id="general-1">General</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mac</th>
+      <th>Windows</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>⇧ + ⌘ + P</td>
+      <td>Ctrl + Shift + P</td>
+      <td>Show Command Palette</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="view-1">View</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mac</th>
+      <th>Windows</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>Ctrl + B</td>
+      <td>Toggle Sidebar visibility</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Ctrl + Shift + E</td>
+      <td>Toggle File Explorer visibility</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Ctrl + Shift + G</td>
+      <td>Toggle Git</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="markdown">Markdown</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mac</th>
+      <th>Windows</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>Ctrl + K, V</td>
+      <td>Open Preview to the Side</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="jekyll-compose">Jekyll Compose</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Use this command</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>jekyll draft “<em>[new draft]</em>”</td>
+      <td>Create new draft</td>
+    </tr>
+    <tr>
+      <td>jekyll publist <em>draft/ _[draft].md</em> –date 2019-07-09</td>
+      <td>Publish your draft</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="sourcetree">SourceTree</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mac</th>
+      <th>Windows</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Shift + Cmd + C</td>
+      <td>Ctrl + Shift + C</td>
+      <td>Commit</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="microsoft-project">Microsoft Project</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Press this key</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Insert</td>
+      <td>Insert Task</td>
+    </tr>
+    <tr>
+      <td>Shift + Space, Delete</td>
+      <td>Delete Task</td>
+    </tr>
+  </tbody>
+</table>
+:ET

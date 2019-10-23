@@ -1,0 +1,2 @@
+I"�<p>在Xamarin Forms跨平台存取Android的Activity，需要安裝與設定CurrentActivityPlugin才能達成，比如使用MediaPlugin在Android就需要用到，請參考<a href="https://montemagno.com/access-the-current-android-activity-from-anywhere/">Access the Current Android Activity from Anywhere</a>，安裝步驟請參考<a href="https://github.com/jamesmontemagno/CurrentActivityPlugin">Xamarin.Forms CurrentActivityPlugin</a></p>
+:ET

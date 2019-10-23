@@ -1,0 +1,60 @@
+I"�<p>在Xamarin Forms跨平台存取Android的Activity，需要安裝與設定CurrentActivityPlugin才能達成，比如使用MediaPlugin在Android就需要用到，請參考<a href="https://montemagno.com/access-the-current-android-activity-from-anywhere/">Access the Current Android Activity from Anywhere</a>，安裝步驟請參考<a href="https://github.com/jamesmontemagno/CurrentActivityPlugin">Xamarin.Forms CurrentActivityPlugin</a></p>
+
+<ol>
+  <li>
+    <p>安裝CurrentActivity Plugin
+在Xamarin.Android專案使用Manage Nuget Packages找到Plugin.CurrentActivity，目前版本是v1.0.1，最後更新時間是2015-12-19，但已看到有beta版釋出，比較放心勇敢地使用😸
+  <img src="/images/2018/04/install-currentactivity-01.png" alt="install-currentactivity-01" /></p>
+  </li>
+  <li>新增一個名為”MainApplication.cs”的C# class
+    <ul>
+      <li>安裝CurrentActivity後會開啟readme.txt內容敘述中，說明了Xamarin.Android根目錄會安裝”MainApplication.cs”，這樣的敘述我認為應該是自動產生，但看起來並沒有，就自己建立吧。</li>
+      <li>在class加註[Application]。</li>
+      <li>“MainApplication”繼承Application, 以及Applicaion.IActivityLifecycleCallbacks。</li>
+      <li>用工具Implement IActivityLifecycleCallbacks的Interface(在IActivityLifecycleCallbacks的Interface上點選即可)。</li>
+      <li>增加一個constructor。</li>
+      <li>override OnCreate以及OnTerminate，分別加入RegisterActivityLifecycleCallbacks(this)以及UnregisterActivityLifecycleCallbacks(this)</li>
+      <li>在OnActivityCreated, OnActivityStarted, OnActivityResumed加入CrossCurrentActivity.Current.Activity = activity。</li>
+    </ul>
+  </li>
+  <li>完整程式碼如下
+    <div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="p">[</span><span class="n">Application</span><span class="p">]</span>
+  <span class="k">public</span> <span class="k">class</span> <span class="nc">MainApplication</span> <span class="p">:</span> <span class="n">Application</span><span class="p">,</span> <span class="n">Application</span><span class="p">.</span><span class="n">IActivityLifecycleCallbacks</span>
+  <span class="p">{</span>
+      <span class="k">protected</span> <span class="nf">MainApplication</span><span class="p">(</span><span class="n">IntPtr</span> <span class="n">javaReference</span><span class="p">,</span> <span class="n">JniHandleOwnership</span> <span class="n">transfer</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">javaReference</span><span class="p">,</span> <span class="n">transfer</span><span class="p">)</span>
+      <span class="p">{</span>
+      <span class="p">}</span>
+
+      <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnCreate</span><span class="p">()</span>
+      <span class="p">{</span>
+          <span class="k">base</span><span class="p">.</span><span class="nf">OnCreate</span><span class="p">();</span>
+          <span class="nf">RegisterActivityLifecycleCallbacks</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnTerminate</span><span class="p">()</span>
+      <span class="p">{</span>
+          <span class="k">base</span><span class="p">.</span><span class="nf">OnTerminate</span><span class="p">();</span>
+          <span class="nf">UnregisterActivityLifecycleCallbacks</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+      <span class="p">}</span>
+
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">OnActivityCreated</span><span class="p">(</span><span class="n">Activity</span> <span class="n">activity</span><span class="p">,</span> <span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span>
+      <span class="p">{</span>
+          <span class="n">CrossCurrentActivity</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Activity</span> <span class="p">=</span> <span class="n">activity</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">OnActivityResumed</span><span class="p">(</span><span class="n">Activity</span> <span class="n">activity</span><span class="p">)</span>
+      <span class="p">{</span>
+          <span class="n">CrossCurrentActivity</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Activity</span> <span class="p">=</span> <span class="n">activity</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">public</span> <span class="k">void</span> <span class="nf">OnActivityStarted</span><span class="p">(</span><span class="n">Activity</span> <span class="n">activity</span><span class="p">)</span>
+      <span class="p">{</span>
+          <span class="n">CrossCurrentActivity</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Activity</span> <span class="p">=</span> <span class="n">activity</span><span class="p">;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>到這邊安裝設定完成，在跨專案存取Activity。</p>
+:ET

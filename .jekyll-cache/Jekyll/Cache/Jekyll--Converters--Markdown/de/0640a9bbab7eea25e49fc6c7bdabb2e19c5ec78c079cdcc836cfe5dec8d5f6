@@ -1,0 +1,3 @@
+I"�<h3 id="緣起">緣起</h3>
+<p>開發跨平台專案，時常需要同時了解Server與Client互動的關係與結果，過去，Server端一定要完成API的設計與開發，Client端才能依據文件與端口進行開發與測試，在Visaul Studio的跨平台方案，將Server與Client放在一起，本篇將介紹如何在內網的手機App存取內網的Server，以便快速除錯平衡兩邊的開發。</p>
+:ET

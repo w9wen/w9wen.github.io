@@ -1,0 +1,76 @@
+I"�<h2 id="緣起">緣起</h2>
+<p>Chatbot為近年最為火紅的應用服務，越多人使用的平台，越能有開發多元化層面的效果；Facebook、Skype均有提供Chatbot的開發介面，而且Microsoft Azure也提供了<a href="https://azure.microsoft.com/zh-tw/services/bot-service/">Bot Services</a>提供跨平台應用，但在東亞、東南亞使用者眾的LINE平台並沒有整合進來，需要單獨做串接。</p>
+
+<p>:beginner: LINE提供開發者打造LINE Chatbot已有一段時間，去年BOT API改名為LINE Messaging API以符合應用情境，畢竟建立Bot核心在於WebAPI的開發端。</p>
+
+<p>🚀LINE Messaging API使用RESTful的通訊格式，雖然知道，使用原生的API最為安全可靠，但是最後還是被 😩<strong>懶惰</strong> 擊垮，開始了尋覓SDK的生涯；<a href="https://developers.line.me/en/docs/messaging-api/line-bot-sdk/">LINE官方提供的SDK</a>，有<code class="highlighter-rouge">Java</code>、<code class="highlighter-rouge">PHP</code>、等，但沒有提供<code class="highlighter-rouge">C#</code>(沒關係，已經習慣了)，但還是有社群善心人事提供了C#版本。</p>
+
+<blockquote>
+  <p>官網推薦了兩個社群開發的C# SDK，也有台灣人自己提供的版本，當然沒辦法馬上比較出優劣，只能用Github上的更新日期以及提供的Template來決定了。
+我這邊是使用<a href="https://github.com/pierre3/LineMessagingApi">pierre3/LineMessagingApi </a>這個版本的SDK，若想要使用SDK更深入了解學習，我特別推薦<a href="http://studyhost.blogspot.tw/2016/05/linebot-1-clinebot.html">.NET Walker所撰寫的LineBot系列</a></p>
+</blockquote>
+
+<h2 id="目標">目標</h2>
+<p>建立的LINE Chatbot可以加入好友，並且進行初步訊息的溝通；分為幾個步驟，以下圖(取自於<a href="https://developers.line.me/en/docs/messaging-api/overview/">LINE Developer</a>)來說，第一步先要在Messaging API建立帳號、設定一個LINE Channel，然後建立一個WebAPI(<code class="highlighter-rouge">YOUR SYSTEM</code>)上面建立Webhook的應用程式。</p>
+
+<p><img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-01.png" alt="chatbot-create-line-bot-using-messageing-api-01" /></p>
+
+<h3 id="line-messaging-api">LINE Messaging API</h3>
+<p>首先要先申請帳號加入LINE Developer，以此帳號登入Console後，要建立一個Provider，請參考<a href="https://developers.line.me/en/docs/messaging-api/overview/">LINE Developer 官方說明</a>，中文則推薦<a href="http://studyhost.blogspot.tw/2016/05/linebot-1-clinebot.html">.NET Walker的Line Bot申請流程</a></p>
+
+<p><img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-02.png" alt="chatbot-create-line-bot-using-messageing-api-02" /></p>
+
+<h3 id="使用linemessagingapi-sdk範本建立webapi">使用LineMessagingApi SDK範本建立WebAPI</h3>
+<p>我們現在要來做圖示的<strong>YOUR SYSTEM</strong>這一段</p>
+
+<p><img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-03.png" alt="chatbot-create-line-bot-using-messageing-api-03" />。</p>
+<ol>
+  <li>請先下載安裝<a href="https://marketplace.visualstudio.com/items?itemName=pierre3.LINEBotCSharpTemplate">LINE Bot C# Template</a>；這位日本好手已經是雲端能者，範本已經結合Azure Storage Account，也提供了Azure Function的範本。</li>
+  <li>建立LINEBotApplication WebAPI
+    <ul>
+      <li>在Visual Studio，建立新專案，找到Cloud分類，往下拉就可以看到三個LINE Bot的範本，選擇LINEBotApplication。<br />
+  <img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-04.png" alt="chatbot-create-line-bot-using-messageing-api-04" /></li>
+      <li>這是一個WebAPI的專案結構<br />
+<img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-05.png" alt="chatbot-create-line-bot-using-messageing-api-05" /></li>
+      <li>Controllers資料夾中的LINEBotController就是要註冊我們在LINE Developers Console中Channel Settins Webhook。</li>
+      <li>CloudStorage資料夾中定義存取Media資源以及事件的紀錄。</li>
+      <li>Root下的LineBotApp.cs，就是我們撰寫傳接LINE Messaging API的位置。</li>
+    </ul>
+  </li>
+  <li>Web.config設定<br />
+  以下由相關網站取得資料填入
+    <pre><code class="language-XML"> &lt;appSettings&gt;
+   &lt;add key="ChannelSecret" value="由LINE Developers Console取得(Channel secret)" /&gt;
+   &lt;add key="ChannelAccessToken" value="由LINE Developers Console取得(Channel accesss token)" /&gt;
+   &lt;add key="StorageConnectionString" value="由Azure Storage Account取得連線字串" /&gt;
+ &lt;/appSettings&gt;
+</code></pre>
+  </li>
+  <li>建立WebAPI網站
+    <ul>
+      <li>最快的方式是將網站發布到Azure Web App。</li>
+      <li>在LINE Developer Console啟用Webhooks，並將Azure Web App的WebAPI位置設定在Webhook URL，SSL是必須的，Azure Web App好處是預設啟用方便開發人員進行部署，只要將URL改為https即可(不建議產品類型)<br />
+  <img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-06.png" alt="chatbot-create-line-bot-using-messageing-api-06" /></li>
+    </ul>
+  </li>
+</ol>
+
+<p>完成了，只要將LINE Bot加入好友，就可以對話了~~ ，這個Template做得太貼心了💥。</p>
+
+<h3 id="測試">測試</h3>
+<p><img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-07.png" alt="/chatbot-create-line-bot-using-messageing-api-07" /></p>
+<ol>
+  <li>掃描LINE Developers Console中Channel所提供的QR code，加入有後，開始傳遞訊息。</li>
+  <li>加入好友會有初始訊息，可以在LINE Developers Console中設定
+    <ul>
+      <li>Auto-reply messages.</li>
+      <li>Greeting messages<br />
+  <img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-08.png" alt="chatbot-create-line-bot-using-messageing-api-08" /></li>
+    </ul>
+  </li>
+  <li>傳遞文字，LINE Bot會回您相同的文字，傳遞貼圖，LINE Bot回傳您隨機抽樣的貼圖，傳遞Media，LINE Bot回傳您儲存在Azure Blob的位置。<br />
+<img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-09.png" alt="chatbot-create-line-bot-using-messageing-api-09" /></li>
+</ol>
+
+<p>Done:metal:</p>
+:ET

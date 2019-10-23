@@ -1,0 +1,120 @@
+I"�2<p>在Xamarin.Forms的Core專案要實現跨平台存取照相機、攝影機或相簿，要安裝設定MediaPlugin，請參考<a href="https://github.com/jamesmontemagno/MediaPlugin">MediaPlugin by James Montemagno</a>。</p>
+
+<h3 id="為各平台建立權限">為各平台建立權限</h3>
+
+<h4 id="xamarinandroid">Xamarin.Android</h4>
+<ol>
+  <li>打開專案屬性編輯Android Manifest，將WRITE_EXTERNAL_STORAGE 以及 READ_EXTERNAL_STORAGE打勾，而在Marshmallow上(不是每個API都需要，但Marshmallow使用者眾，就安裝好了)執行時要提示使用者使用Native時，便需要安裝PermissionPlugin，請在方案上按右鍵，使用Nuget管理員安裝在三個專案中，並在Xamarin.Android的MainActivity中override OnRequestPermissionsResult，程式碼如下
+    <div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnRequestPermissionsResult</span><span class="p">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">permissions</span><span class="p">,</span> <span class="p">[</span><span class="n">GeneratedEnum</span><span class="p">]</span> <span class="n">Permission</span><span class="p">[]</span> <span class="n">grantResults</span><span class="p">)</span>
+  <span class="p">{</span>
+      <span class="k">base</span><span class="p">.</span><span class="nf">OnRequestPermissionsResult</span><span class="p">(</span><span class="n">requestCode</span><span class="p">,</span> <span class="n">permissions</span><span class="p">,</span> <span class="n">grantResults</span><span class="p">);</span>
+      <span class="n">PermissionsImplementation</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="nf">OnRequestPermissionsResult</span><span class="p">(</span><span class="n">requestCode</span><span class="p">,</span> <span class="n">permissions</span><span class="p">,</span> <span class="n">grantResults</span><span class="p">);</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>安裝設定CurrentActivity Plugin
+  請參考<a href="/xamarin/xamarin.forms/plugin/install-currentactivity-plugin-access-xamarin-android-activity/">[Xamarin.Forms] 安裝CurrentActivity Plugin藉以存取Xamarin.Android Activity</a></li>
+  <li>聲明裝置必須性，在AssemblyInfo.cs加入以下程式碼
+    <div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="p">[</span><span class="n">assembly</span><span class="p">:</span> <span class="nf">UsesFeature</span><span class="p">(</span><span class="s">"android.hardware.camera"</span><span class="p">,</span> <span class="n">Required</span> <span class="p">=</span> <span class="k">false</span><span class="p">)]</span>
+ <span class="p">[</span><span class="n">assembly</span><span class="p">:</span> <span class="nf">UsesFeature</span><span class="p">(</span><span class="s">"android.hardware.camera.autofocus"</span><span class="p">,</span> <span class="n">Required</span> <span class="p">=</span> <span class="k">false</span><span class="p">)]</span>
+</code></pre></div>    </div>
+  </li>
+  <li>為了指定存取檔案資料夾，統一在AndroidManifest.xml的<code class="highlighter-rouge">&lt;application&gt;</code>進行以下配置
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     <span class="nt">&lt;provider</span> <span class="na">android:name=</span><span class="s">"android.support.v4.content.FileProvider"</span>
+             <span class="na">android:authorities=</span><span class="s">"${applicationId}.fileprovider"</span>
+             <span class="na">android:exported=</span><span class="s">"false"</span>
+             <span class="na">android:grantUriPermissions=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+
+       <span class="nt">&lt;meta-data</span> <span class="na">android:name=</span><span class="s">"android.support.FILE_PROVIDER_PATHS"</span>
+                      <span class="na">android:resource=</span><span class="s">"@xml/file_paths"</span><span class="nt">&gt;&lt;/meta-data&gt;</span>
+     <span class="nt">&lt;/provider&gt;</span>
+</code></pre></div>    </div>
+    <p>還沒完，我累了~~~😫，這是跨平台必經過程嗎?不過，先苦後甘
+4.建立一個App存取檔案專屬的路徑，在Resrouces下建立一個名為”xml”的資料夾，底下增加一個名為”file_paths”的xml檔案，內容如下</p>
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">&lt;?xml version="1.0" encoding="utf-8" ?&gt;</span>
+ <span class="nt">&lt;paths</span> <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;external-files-path</span> <span class="na">name=</span><span class="s">"my_images"</span> <span class="na">path=</span><span class="s">"Pictures"</span> <span class="nt">/&gt;</span>
+   <span class="nt">&lt;external-files-path</span> <span class="na">name=</span><span class="s">"my_movies"</span> <span class="na">path=</span><span class="s">"Movies"</span> <span class="nt">/&gt;</span>
+ <span class="nt">&lt;/paths&gt;</span>
+</code></pre></div>    </div>
+    <p>結束….🔚~~~Android</p>
+  </li>
+</ol>
+
+<h4 id="xamarinios">Xamarin.iOS</h4>
+<p>這倒簡單了，就只需要在info.plist增加相機、相簿的權限宣告即可，請參考<a href="https://blog.xamarin.com/new-ios-10-privacy-permission-settings/">New iOS 10 Privacy Permission Settings</a>。</p>
+
+<h3 id="安裝media-plugin">安裝Media Plugin</h3>
+<p>在方案中幫所有的Xamarin專案安裝Xam.Plugin.Media
+  <img src="/images/2018/04/install-mediaplugin-01.png" alt="install-mediaplugin.01" /></p>
+
+<h3 id="使用跨平台plugin存取native">使用跨平台Plugin存取Native</h3>
+
+<ol>
+  <li>Mdeia.plugin 初始化
+    <div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">await</span> <span class="n">CrossMedia</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="nf">Initialize</span><span class="p">();</span>
+</code></pre></div>    </div>
+  </li>
+  <li>檢查相機與相簿模組
+    <div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">if</span> <span class="p">(!</span><span class="n">CrossMedia</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">IsCameraAvailable</span> <span class="p">||</span> <span class="p">!</span><span class="n">CrossMedia</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">IsTakePhotoSupported</span><span class="p">)</span>
+  <span class="p">{</span>
+   <span class="k">await</span> <span class="nf">DisplayAlert</span><span class="p">(</span><span class="s">"多媒體模組"</span><span class="p">,</span> <span class="s">"相機或相簿不支援"</span><span class="p">,</span> <span class="s">"確定"</span><span class="p">);</span>
+   <span class="k">return</span><span class="p">;</span>
+  <span class="p">}</span>  
+</code></pre></div>    </div>
+  </li>
+  <li>檢查提示使用者開放存取權限
+    <div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">if</span> <span class="p">(</span><span class="n">cameraStatus</span> <span class="p">!=</span> <span class="n">PermissionStatus</span><span class="p">.</span><span class="n">Granted</span> <span class="p">||</span> <span class="n">storageStatus</span> <span class="p">!=</span> <span class="n">PermissionStatus</span><span class="p">.</span><span class="n">Granted</span><span class="p">)</span>
+  <span class="p">{</span>
+   <span class="kt">var</span> <span class="n">results</span> <span class="p">=</span> <span class="k">await</span> <span class="n">CrossPermissions</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="nf">RequestPermissionsAsync</span><span class="p">(</span><span class="k">new</span><span class="p">[]</span> <span class="p">{</span> <span class="n">Permission</span><span class="p">.</span><span class="n">Camera</span><span class="p">,</span> <span class="n">Permission</span><span class="p">.</span><span class="n">Storage</span> <span class="p">});</span>
+   <span class="n">cameraStatus</span> <span class="p">=</span> <span class="n">results</span><span class="p">[</span><span class="n">Permission</span><span class="p">.</span><span class="n">Camera</span><span class="p">];</span>
+   <span class="n">storageStatus</span> <span class="p">=</span> <span class="n">results</span><span class="p">[</span><span class="n">Permission</span><span class="p">.</span><span class="n">Storage</span><span class="p">];</span>
+  <span class="p">}</span>  
+</code></pre></div>    </div>
+  </li>
+  <li>在存取權限的情況下，取得相機或相簿，詳細設定可以參考Media Plugin的文件
+    <div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">if</span> <span class="p">(</span><span class="n">cameraStatus</span> <span class="p">==</span> <span class="n">PermissionStatus</span><span class="p">.</span><span class="n">Granted</span> <span class="p">&amp;&amp;</span> <span class="n">storageStatus</span> <span class="p">==</span> <span class="n">PermissionStatus</span><span class="p">.</span><span class="n">Granted</span><span class="p">)</span>
+  <span class="p">{</span>
+  <span class="kt">var</span> <span class="n">file</span> <span class="p">=</span> <span class="k">await</span> <span class="n">CrossMedia</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="nf">TakePhotoAsync</span><span class="p">(</span><span class="k">new</span> <span class="n">StoreCameraMediaOptions</span>
+  <span class="p">{</span>
+      <span class="n">DefaultCamera</span> <span class="p">=</span> <span class="n">CameraDevice</span><span class="p">.</span><span class="n">Front</span><span class="p">,</span> <span class="c1">// Android無法執行</span>
+      <span class="c1">//AllowCropping = true,</span>
+      <span class="c1">//SaveToAlbum = true</span>
+      <span class="c1">//SaveMetaData = true,</span>
+      <span class="c1">//PhotoSize = PhotoSize.Medium,</span>
+      <span class="c1">//CompressionQuality = 92</span>
+      <span class="c1">//Directory = "Sample",</span>
+      <span class="c1">//Name = "test.jpg"</span>
+  <span class="p">});</span>
+
+  <span class="c1">//var file = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions { });</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">file</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+      <span class="k">return</span><span class="p">;</span>
+
+  <span class="c1">//await DisplayAlert("File Location", file.Path, "OK");</span>
+
+  <span class="n">ImageShow</span><span class="p">.</span><span class="n">Source</span> <span class="p">=</span> <span class="n">ImageSource</span><span class="p">.</span><span class="nf">FromStream</span><span class="p">(()</span> <span class="p">=&gt;</span>
+  <span class="p">{</span>
+      <span class="kt">var</span> <span class="n">stream</span> <span class="p">=</span> <span class="n">file</span><span class="p">.</span><span class="nf">GetStream</span><span class="p">();</span>
+      <span class="k">return</span> <span class="n">stream</span><span class="p">;</span>
+  <span class="p">});</span>
+  <span class="p">}</span>
+  <span class="k">else</span>
+  <span class="p">{</span>
+  <span class="k">await</span> <span class="nf">DisplayAlert</span><span class="p">(</span><span class="s">"使用者權限"</span><span class="p">,</span> <span class="s">"無法存取相機或相簿"</span><span class="p">,</span> <span class="s">"確定"</span><span class="p">);</span>
+  <span class="c1">//On iOS you may want to send your user to the settings screen.</span>
+  <span class="c1">//CrossPermissions.Current.OpenAppSettings();</span>
+  <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="ios-看-android-phone">iOS 看 Android Phone</h3>
+<p><img src="/images/2018/04/install-mediaplugin-04.PNG" alt="  install-mediaplugin-04" />
+  <img src="/images/2018/04/install-mediaplugin-05.PNG" alt="  install-mediaplugin-05" /></p>
+
+<h3 id="android-看-iphone">Android 看 iPhone</h3>
+<p><img src="/images/2018/04/install-mediaplugin-02.png" alt="" />
+  <img src="/images/2018/04/install-mediaplugin-03.png" alt="install-mediaplugin-02" /></p>
+:ET

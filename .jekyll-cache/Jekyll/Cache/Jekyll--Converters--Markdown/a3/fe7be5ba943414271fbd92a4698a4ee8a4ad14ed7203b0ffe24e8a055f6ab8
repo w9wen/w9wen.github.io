@@ -1,0 +1,6 @@
+I"y<p>更新Ruby的套件</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="n">update</span> <span class="n">bundle</span>
+</code></pre></div></div>
+<p>只要更新到sass的套件，都會出現下列的錯誤
+<img src="/images/2018/04/solved-update-01.png" alt="solved-update-01" /></p>
+:ET

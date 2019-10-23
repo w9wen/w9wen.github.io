@@ -1,0 +1,23 @@
+I"�<h1 id="my-packages">My Packages.</h1>
+<p>紀錄開發工具所使用到的外掛元件或是第三方套件。</p>
+
+<h2 id="atom">Atom</h2>
+<p>程式碼編輯器</p>
+<h3 id="core-packages">Core Packages</h3>
+<h4 id="autosave">autosave</h4>
+<p>Settings -&gt; Enabled</p>
+<h3 id="community-packages">Community Packages</h3>
+<h4 id="atom-runner">atom-runner</h4>
+<p>Add the following code to config.</p>
+<blockquote>
+  <p>runner:
+ extensions:
+   py: “/user/local/bin/python3”</p>
+</blockquote>
+
+<h4 id="file-icons">file-icons</h4>
+<h4 id="platformio-ide-terminal">platformio-ide-terminal</h4>
+<h4 id="markdown-writer">markdown-writer</h4>
+<h4 id="kite">kite</h4>
+<p>Python code cloud IntelliSense.</p>
+:ET
