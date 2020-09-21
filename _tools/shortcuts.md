@@ -90,9 +90,9 @@ Reference [Here](https://support.microsoft.com/en-us/help/12445/windows-keyboard
 
 ### Git
 
-| Mac | Windows | To do this |
-| --- | ------- | ---------- |
-|     | Alt+ G  | Git Menu   |
+| Mac | Windows         | To do this  |
+| --- | --------------- | ----------- |
+|     | Ctrl + Alt + F3 | View Branch |
 
 ### Search
 
