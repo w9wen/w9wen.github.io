@@ -1,4 +1,4 @@
-I"o<p>我的部落格是由jekyll建置，使用了theme:Minimal Mistakes，內容如下</p>
+I"�<p>我的部落格是由jekyll建置，使用了theme:Minimal Mistakes，內容如下</p>
 
 <h3 id="jekyll">Jekyll</h3>
 <p><a href="https://jekyllrb.com">Jekyll</a>是一套靜態網頁編輯器，有以下的特點</p>
@@ -35,7 +35,7 @@
 <p>Ruby官方並不支援Windows，所以要另外使用<a href="https://rubyinstaller.org/">RubyInstaller</a>來安裝，現在已經不需要再另外安裝DevKit，比以前簡單多了。</p>
 
 <h4 id="jekyll-1">Jekyll</h4>
-<p>有了Ruby，你只要<code class="highlighter-rouge">jekyll new myBlog</code>，就建立起了我的部落格了。</p>
+<p>有了Ruby，你只要<code class="language-plaintext highlighter-rouge">jekyll new myBlog</code>，就建立起了我的部落格了。</p>
 <h4 id="minimal-mistakes-jekyll-theme">Minimal Mistakes Jekyll Theme</h4>
 <p>這是我一直提到、我找到最滿意最滿意的Template，提供了以下的服務</p>
 <h5 id="積極的更新">積極的更新</h5>

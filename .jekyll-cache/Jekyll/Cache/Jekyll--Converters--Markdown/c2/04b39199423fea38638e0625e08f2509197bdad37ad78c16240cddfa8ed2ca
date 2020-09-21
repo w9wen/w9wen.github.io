@@ -1,14 +1,15 @@
-I"�)<h1 id="welcome-to-my-shortcuts-libraries">Welcome to my shortcuts libraries.</h1>
+I"+<h1 id="welcome-to-my-shortcuts-libraries">Welcome to my shortcuts libraries.</h1>
 
 <p>The reason is I work in multiple platform for very short time, I cannot remember many skill while I changed the tool. The shortcuts of the tool is the most important feature for the user, I think if there have one place let me reference, and I can quickly use them no effort.</p>
 
 <h2 id="mac-os">Mac OS</h2>
+
 <p>Reference <a href="https://support.apple.com/en-us/HT204434" title="Mac accessibility shortcuts">Here</a><!-- {:target="_blank"} --></p>
 
 <ul>
   <li>Command ⌘</li>
   <li>Option ⌥</li>
-  <li>Shift  ⇧</li>
+  <li>Shift ⇧</li>
   <li>Control ⌃</li>
 </ul>
 
@@ -30,9 +31,10 @@
 </table>
 
 <h2 id="xcode">Xcode</h2>
+
 <p>Reference <a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/xcode_help-command_shortcuts/MenuCommands/MenuCommands014.html">Here</a><!-- {:target="_blank"} --></p>
 
-<h3 id="table-1-3--edit-menu-command-shortcuts">Table 1-3  Edit menu command shortcuts</h3>
+<h3 id="table-1-3-edit-menu-command-shortcuts">Table 1-3 Edit menu command shortcuts</h3>
 
 <table>
   <thead>
@@ -57,7 +59,7 @@
   </tbody>
 </table>
 
-<h3 id="table-1-5--navigate-menu-command-shortcuts">Table 1-5  Navigate menu command shortcuts</h3>
+<h3 id="table-1-5-navigate-menu-command-shortcuts">Table 1-5 Navigate menu command shortcuts</h3>
 
 <table>
   <thead>
@@ -156,12 +158,30 @@
 <h2 id="visual-studio">Visual Studio</h2>
 
 <h3 id="view">View</h3>
-<p>| Mac | Windows           | To do this     |
-|—–|——————-|—————-|
-|     | Ctrl +  Alt + L        |   Solution Explorer      |
-|     | Ctrl + \, Ctrl + M        |   Team Explorer      |</p>
 
-<h3 id="run-and-debug">Run and Debug</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Mac</th>
+      <th>Windows</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>Ctrl + Alt + L</td>
+      <td>Solution Explorer</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Ctrl + \, Ctrl + M</td>
+      <td>Team Explorer</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="debug">Debug</h3>
 
 <table>
   <thead>
@@ -200,6 +220,25 @@
   </tbody>
 </table>
 
+<h3 id="git">Git</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mac</th>
+      <th>Windows</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>Alt+ G</td>
+      <td>Git Menu</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="search">Search</h3>
 
 <table>
@@ -232,7 +271,7 @@
   <tbody>
     <tr>
       <td> </td>
-      <td>Ctrl + .  (Alt + Enter)</td>
+      <td>Ctrl + . (Alt + Enter)</td>
       <td>Quick Actions and Refactorings</td>
     </tr>
     <tr>
@@ -296,7 +335,7 @@
   </tbody>
 </table>
 
-<h3 id="run-and-debug-1">Run and Debug</h3>
+<h3 id="run-and-debug">Run and Debug</h3>
 
 <p>Reference <a href="https://shortcutworld.com/en/Eclipse/win/all#link_11">Here</a><!-- {:target="_blank"} --></p>
 
@@ -365,6 +404,7 @@
 <h2 id="atom---the-tears-of-the-time">Atom - the tears of the time</h2>
 
 <p>Reference <a href="https://github.com/nwinkler/atom-keyboard-shortcuts#window-management">HERE</a></p>
+
 <ul>
   <li>組合快速鍵以此處為準</li>
 </ul>
@@ -408,9 +448,23 @@
 <p>Reference <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf">macOS HERE</a></p>
 
 <h3 id="display">Display</h3>
-<p>| Mac       | Windows          | To do this                    |
-|———–|——————|——————————-|
-|           |   Ctrl + `   | Toggle Integrated Terminal     |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mac</th>
+      <th>Windows</th>
+      <th>To do this</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>Ctrl + `</td>
+      <td>Toggle Integrated Terminal</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="general-1">General</h3>
 
@@ -494,7 +548,7 @@
       <td>Create new draft</td>
     </tr>
     <tr>
-      <td>jekyll publist <em>draft/ _[draft].md</em> –date 2019-07-09</td>
+      <td>jekyll publist _draft/ _[draft].md_ –date 2019-07-09</td>
       <td>Publish your draft</td>
     </tr>
   </tbody>

@@ -1,4 +1,4 @@
-I"�2<p>在Xamarin.Forms的Core專案要實現跨平台存取照相機、攝影機或相簿，要安裝設定MediaPlugin，請參考<a href="https://github.com/jamesmontemagno/MediaPlugin">MediaPlugin by James Montemagno</a>。</p>
+I"�2<p>在Xamarin.Forms的Core專案要實現跨平台存取照相機、攝影機或相簿，要安裝設定MediaPlugin，請參考<a href="https://github.com/jamesmontemagno/MediaPlugin">MediaPlugin by James Montemagno</a>。</p>
 
 <h3 id="為各平台建立權限">為各平台建立權限</h3>
 
@@ -19,7 +19,7 @@
  <span class="p">[</span><span class="n">assembly</span><span class="p">:</span> <span class="nf">UsesFeature</span><span class="p">(</span><span class="s">"android.hardware.camera.autofocus"</span><span class="p">,</span> <span class="n">Required</span> <span class="p">=</span> <span class="k">false</span><span class="p">)]</span>
 </code></pre></div>    </div>
   </li>
-  <li>為了指定存取檔案資料夾，統一在AndroidManifest.xml的<code class="highlighter-rouge">&lt;application&gt;</code>進行以下配置
+  <li>為了指定存取檔案資料夾，統一在AndroidManifest.xml的<code class="language-plaintext highlighter-rouge">&lt;application&gt;</code>進行以下配置
     <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     <span class="nt">&lt;provider</span> <span class="na">android:name=</span><span class="s">"android.support.v4.content.FileProvider"</span>
              <span class="na">android:authorities=</span><span class="s">"${applicationId}.fileprovider"</span>
              <span class="na">android:exported=</span><span class="s">"false"</span>

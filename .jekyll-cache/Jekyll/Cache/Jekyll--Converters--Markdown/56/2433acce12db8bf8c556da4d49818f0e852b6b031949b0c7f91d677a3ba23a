@@ -1,9 +1,9 @@
-I"�<h2 id="緣起">緣起</h2>
+I"$<h2 id="緣起">緣起</h2>
 <p>Chatbot為近年最為火紅的應用服務，越多人使用的平台，越能有開發多元化層面的效果；Facebook、Skype均有提供Chatbot的開發介面，而且Microsoft Azure也提供了<a href="https://azure.microsoft.com/zh-tw/services/bot-service/">Bot Services</a>提供跨平台應用，但在東亞、東南亞使用者眾的LINE平台並沒有整合進來，需要單獨做串接。</p>
 
 <p>:beginner: LINE提供開發者打造LINE Chatbot已有一段時間，去年BOT API改名為LINE Messaging API以符合應用情境，畢竟建立Bot核心在於WebAPI的開發端。</p>
 
-<p>🚀LINE Messaging API使用RESTful的通訊格式，雖然知道，使用原生的API最為安全可靠，但是最後還是被 😩<strong>懶惰</strong> 擊垮，開始了尋覓SDK的生涯；<a href="https://developers.line.me/en/docs/messaging-api/line-bot-sdk/">LINE官方提供的SDK</a>，有<code class="highlighter-rouge">Java</code>、<code class="highlighter-rouge">PHP</code>、等，但沒有提供<code class="highlighter-rouge">C#</code>(沒關係，已經習慣了)，但還是有社群善心人事提供了C#版本。</p>
+<p>🚀LINE Messaging API使用RESTful的通訊格式，雖然知道，使用原生的API最為安全可靠，但是最後還是被 😩<strong>懶惰</strong> 擊垮，開始了尋覓SDK的生涯；<a href="https://developers.line.me/en/docs/messaging-api/line-bot-sdk/">LINE官方提供的SDK</a>，有<code class="language-plaintext highlighter-rouge">Java</code>、<code class="language-plaintext highlighter-rouge">PHP</code>、等，但沒有提供<code class="language-plaintext highlighter-rouge">C#</code>(沒關係，已經習慣了)，但還是有社群善心人事提供了C#版本。</p>
 
 <blockquote>
   <p>官網推薦了兩個社群開發的C# SDK，也有台灣人自己提供的版本，當然沒辦法馬上比較出優劣，只能用Github上的更新日期以及提供的Template來決定了。
@@ -11,7 +11,7 @@
 </blockquote>
 
 <h2 id="目標">目標</h2>
-<p>建立的LINE Chatbot可以加入好友，並且進行初步訊息的溝通；分為幾個步驟，以下圖(取自於<a href="https://developers.line.me/en/docs/messaging-api/overview/">LINE Developer</a>)來說，第一步先要在Messaging API建立帳號、設定一個LINE Channel，然後建立一個WebAPI(<code class="highlighter-rouge">YOUR SYSTEM</code>)上面建立Webhook的應用程式。</p>
+<p>建立的LINE Chatbot可以加入好友，並且進行初步訊息的溝通；分為幾個步驟，以下圖(取自於<a href="https://developers.line.me/en/docs/messaging-api/overview/">LINE Developer</a>)來說，第一步先要在Messaging API建立帳號、設定一個LINE Channel，然後建立一個WebAPI(<code class="language-plaintext highlighter-rouge">YOUR SYSTEM</code>)上面建立Webhook的應用程式。</p>
 
 <p><img src="/images/2018/05/chatbot-create-line-bot-using-messageing-api-01.png" alt="chatbot-create-line-bot-using-messageing-api-01" /></p>
 

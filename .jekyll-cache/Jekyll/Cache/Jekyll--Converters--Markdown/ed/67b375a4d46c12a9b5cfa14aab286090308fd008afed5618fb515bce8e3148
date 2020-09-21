@@ -1,4 +1,4 @@
-I"u<h2 id="william-wen">William Wen</h2>
+I"�<h2 id="william-wen">William Wen</h2>
 
 <h3 id="biography">Biography</h3>
 <p>I live in Taipei. Taiwan, My wife and I have two boys.</p>
@@ -9,7 +9,7 @@
 <h3 id="本網站">本網站</h3>
 
 <h4 id="使用工具">使用工具</h4>
-<p>想為自己學過的技術做紀錄，最好自己的文章，也可以使用<code class="highlighter-rouge">git commit</code>等指令做控管。
+<p>想為自己學過的技術做紀錄，最好自己的文章，也可以使用<code class="language-plaintext highlighter-rouge">git commit</code>等指令做控管。
 曾經想用技術型的部落格如DOTBlog</p>
 <ul>
   <li>Jekyll</li>

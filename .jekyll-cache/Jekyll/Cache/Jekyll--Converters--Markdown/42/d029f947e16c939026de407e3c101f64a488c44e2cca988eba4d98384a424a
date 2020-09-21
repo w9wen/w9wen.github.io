@@ -1,4 +1,4 @@
-I"�<h3 id="緣起">緣起</h3>
+I"�<h3 id="緣起">緣起</h3>
 <p>開發跨平台專案，時常需要同時了解Server與Client互動的關係與結果，過去，Server端一定要完成API的設計與開發，Client端才能依據文件與端口進行開發與測試，在Visaul Studio的跨平台方案，將Server與Client放在一起，本篇將介紹如何在內網的手機App存取內網的Server，以便快速除錯平衡兩邊的開發。</p>
 
 <h3 id="目標">目標</h3>
@@ -26,11 +26,11 @@
       </li>
     </ul>
 
-    <p>原始網站預設的位址為<code class="highlighter-rouge">localhost</code>，要改為固定IP，要先改applicationhost的設定，否則直接在專案改會出錯，無法更動。</p>
+    <p>原始網站預設的位址為<code class="language-plaintext highlighter-rouge">localhost</code>，要改為固定IP，要先改applicationhost的設定，否則直接在專案改會出錯，無法更動。</p>
     <ul>
-      <li>開啟<code class="highlighter-rouge">applicationhost.config</code>有兩種方式，一種是執行網站後，由IISExpress的快速啟動列開啟，另一種是直接在方案下找到.vs -&gt; config開啟後進行編輯。</li>
-      <li>找到網站設定的<code class="highlighter-rouge">tag</code>，因為有可能這個專案被重複建立了幾次，因此會有id作為辨認，可以直接使用Port來找到正確的設定位置。</li>
-      <li>將<code class="highlighter-rouge">localhost</code>，改為IP位址後存檔
+      <li>開啟<code class="language-plaintext highlighter-rouge">applicationhost.config</code>有兩種方式，一種是執行網站後，由IISExpress的快速啟動列開啟，另一種是直接在方案下找到.vs -&gt; config開啟後進行編輯。</li>
+      <li>找到網站設定的<code class="language-plaintext highlighter-rouge">tag</code>，因為有可能這個專案被重複建立了幾次，因此會有id作為辨認，可以直接使用Port來找到正確的設定位置。</li>
+      <li>將<code class="language-plaintext highlighter-rouge">localhost</code>，改為IP位址後存檔
 <img src="/images/2018/05/cross-platform-add-the-iis-express-setting-for-intranet-access-04.png" alt="cross-platform-add-the-iis-express-setting-for-intranet-access-04" /></li>
     </ul>
   </li>
