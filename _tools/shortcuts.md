@@ -170,6 +170,14 @@ Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcut
 | --------- | ---------------- | -------------------- |
 | ⇧ + ⌘ + P | Ctrl + Shift + P | Show Command Palette |
 
+### Basic editing
+
+| Mac | Windows           | To do this        |
+| --- | ----------------- | ----------------- |
+|     | Alt + ↑ / ↓       | Move line up/down |
+|     | Shift+Alt + ↓ / ↑ | Copy line up/down |
+|     | Ctrl+Shift+K      | Delete line       |
+
 ### View
 
 | Mac | Windows          | To do this                      |
