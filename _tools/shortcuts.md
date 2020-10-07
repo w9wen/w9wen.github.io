@@ -73,10 +73,11 @@ Reference [Here](https://support.microsoft.com/en-us/help/12445/windows-keyboard
 
 ### View
 
-| Mac | Windows            | To do this        |
-| --- | ------------------ | ----------------- |
-|     | Ctrl + Alt + L     | Solution Explorer |
-|     | Ctrl + \, Ctrl + M | Team Explorer     |
+| Mac | Windows             | To do this            |
+| --- | ------------------- | --------------------- |
+|     | Ctrl + Alt + L      | View.SolutionExplorer |
+|     | Ctrl + \ , Ctrl + M | View.TfsTeamExplorer  |
+|     | Ctrl + Shift + F12  | View.NextError        |
 
 ### Debug
 
@@ -92,7 +93,7 @@ Reference [Here](https://support.microsoft.com/en-us/help/12445/windows-keyboard
 
 | Mac | Windows         | To do this  |
 | --- | --------------- | ----------- |
-|     | Ctrl + Alt + F3 | View Branch |
+|     | Ctrl + Alt + F3 | View.Branch |
 
 ### Search
 
