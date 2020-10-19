@@ -112,9 +112,10 @@ Reference [Here](https://support.microsoft.com/en-us/help/12445/windows-keyboard
 
 ### Solution
 
-| Mac | Windows       | To do this                |
-| --- | ------------- | ------------------------- |
-|     | Ctrl + [ 、 S | Sync With Active Document |
+| Mac | Windows         | To do this                |
+| --- | --------------- | ------------------------- |
+|     | Ctrl + [ 、 S   | Sync With Active Document |
+|     | Alt + Shift + C | New Class File            |
 
 ## Eclipse
 
