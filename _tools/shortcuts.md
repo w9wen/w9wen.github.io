@@ -109,6 +109,7 @@ Reference [Here](https://support.microsoft.com/en-us/help/12445/windows-keyboard
 |     | Ctrl + J               | List Members                   |
 |     | Ctrl + U               | Make Lowercase                 |
 |     | Ctrl + Shift + U       | Make Uppercase                 |
+|     | Ctrl + E , V           | Duplicate                      |
 
 ### Solution
 
