@@ -184,10 +184,11 @@ Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcut
 
 ### Editor Focus
 
-| Mac | Windows  | To do this                  |
-| --- | -------- | --------------------------- |
-|     | Alt + F8 | Go to Next Problem          |
-|     | F8       | Go to Next Problem in Files |
+| Mac | Windows     | To do this                  |
+| --- | ----------- | --------------------------- |
+|     | Shift+Alt+R | Reveal in File Explorer     |
+|     | Alt + F8    | Go to Next Problem          |
+|     | F8          | Go to Next Problem in Files |
 
 ### Editor management
 
