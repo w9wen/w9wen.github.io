@@ -179,20 +179,31 @@ Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcut
 | --- | ----------------- | ----------------- |
 |     | Alt + ↑ / ↓       | Move line up/down |
 |     | Shift+Alt + ↓ / ↑ | Copy line up/down |
+|     | Ctrl + Shift + K  | Delete line       |
+|     | Ctrl + Shift + \  | Go to Bracket     |
 
-### Editor
+### Editor Focus
 
-| Mac | Windows          | To do this         |
-| --- | ---------------- | ------------------ |
-|     | Ctrl + Shift + K | action.deleteLines |
+| Mac | Windows     | To do this                  |
+| --- | ----------- | --------------------------- |
+|     | Shift+Alt+R | Reveal in File Explorer     |
+|     | Alt + F8    | Go to Next Problem          |
+|     | F8          | Go to Next Problem in Files |
+
+### Editor management
+
+| Mac | Windows             | To do this   |
+| --- | ------------------- | ------------ |
+|     | Ctrl + F4, Ctrl + W | Close editor |
+|     | Ctrl + K F          | Close folder |
 
 ### View
 
-| Mac | Windows          | To do this                      |
-| --- | ---------------- | ------------------------------- |
-|     | Ctrl + B         | Toggle Sidebar visibility       |
-|     | Ctrl + Shift + E | Toggle File Explorer visibility |
-|     | Ctrl + Shift + G | Toggle Git                      |
+| Mac | Windows             | To do this                      |
+| --- | ------------------- | ------------------------------- |
+|     | Ctrl + B            | Toggle Sidebar visibility       |
+|     | Ctrl + Shift + E    | Toggle File Explorer visibility |
+|     | Ctrl + Shift + G, G | Toggle Git                      |
 
 ### Markdown
 
