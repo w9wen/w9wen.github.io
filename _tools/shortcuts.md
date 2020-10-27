@@ -109,6 +109,7 @@ Reference [Here](https://support.microsoft.com/en-us/help/12445/windows-keyboard
 |     | Ctrl + J               | List Members                   |
 |     | Ctrl + U               | Make Lowercase                 |
 |     | Ctrl + Shift + U       | Make Uppercase                 |
+|     | Ctrl + L               | Edit.LineCut                   |
 
 ### Solution
 
@@ -178,7 +179,12 @@ Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcut
 | --- | ----------------- | ----------------- |
 |     | Alt + ↑ / ↓       | Move line up/down |
 |     | Shift+Alt + ↓ / ↑ | Copy line up/down |
-|     | Ctrl+Shift+K      | Delete line       |
+
+### Editor
+
+| Mac | Windows          | To do this         |
+| --- | ---------------- | ------------------ |
+|     | Ctrl + Shift + K | action.deleteLines |
 
 ### View
 
