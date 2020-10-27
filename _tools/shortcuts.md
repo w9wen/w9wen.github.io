@@ -172,6 +172,7 @@ Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcut
 | Mac       | Windows          | To do this           |
 | --------- | ---------------- | -------------------- |
 | ⇧ + ⌘ + P | Ctrl + Shift + P | Show Command Palette |
+|           | Ctrl + K, F      | Close Folder         |
 
 ### Basic editing
 
