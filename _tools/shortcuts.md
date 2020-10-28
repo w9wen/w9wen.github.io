@@ -118,6 +118,14 @@ Reference [Here](https://support.microsoft.com/en-us/help/12445/windows-keyboard
 |     | Ctrl + [ 、 S   | Sync With Active Document |
 |     | Alt + Shift + C | New Class File            |
 
+### Prism Template Pack
+
+| Mac | Windows | To do this                                         |
+| --- | ------- | -------------------------------------------------- |
+|     | propp   | Create Full Property                               |
+|     | cmd     | Create DelegateCommand with Execute                |
+|     | cmdfull | Create DelegateCommand with Execute and CanExecute |
+
 ## Eclipse
 
 | Mac | Windows   | To do this       |
