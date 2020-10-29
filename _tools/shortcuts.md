@@ -184,12 +184,13 @@ Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcut
 
 ### Basic editing
 
-| Mac | Windows           | To do this        |
-| --- | ----------------- | ----------------- |
-|     | Alt + ↑ / ↓       | Move line up/down |
-|     | Shift+Alt + ↓ / ↑ | Copy line up/down |
-|     | Ctrl + Shift + K  | Delete line       |
-|     | Ctrl + Shift + \  | Go to Bracket     |
+| Mac | Windows              | To do this              |
+| --- | -------------------- | ----------------------- |
+|     | Alt + ↑ / ↓          | Move line up/down       |
+|     | Shift+Alt + ↓ / ↑    | Copy line up/down       |
+|     | Ctrl + Shift + K     | Delete line             |
+|     | Ctrl + Shift + \     | Go to Bracket           |
+|     | Ctrl + Shift + Space | Trigger Parameter Hints |
 
 ### Editor Focus
 
