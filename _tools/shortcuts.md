@@ -196,7 +196,7 @@ Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcut
 
 | Mac | Windows     | To do this                  |
 | --- | ----------- | --------------------------- |
-|     | Shift+Alt+R | Reveal in File Explorer     |
+|  ⌘ + K, R   | Shift+Alt+R | Reveal in File Explorer     |
 |     | Alt + F8    | Go to Next Problem          |
 |     | F8          | Go to Next Problem in Files |
 
@@ -206,6 +206,13 @@ Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcut
 | --- | ------------------- | ------------ |
 |     | Ctrl + F4, Ctrl + W | Close editor |
 |     | Ctrl + K F          | Close folder |
+
+### Display
+
+| Mac | Windows             | To do this   |
+| --- | ------------------- | ------------ |
+|   ⇧ +⌘ + E  | Ctrl + Shift + E | Show Explorer/ Toggle focus |
+|   ⇧ +⌘ + F  | Ctrl + Shift + F | Show Search |
 
 ### View
 
