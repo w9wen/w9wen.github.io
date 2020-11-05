@@ -1,7 +1,7 @@
 *.gem
 *.swp
 *~
-.DS_Store
+*.DS_Store
 .analysis
 .bundle/
 .byebug_history
