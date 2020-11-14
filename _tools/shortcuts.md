@@ -194,11 +194,12 @@ Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcut
 
 ### Editor Focus
 
-| Mac | Windows     | To do this                  |
-| --- | ----------- | --------------------------- |
-|  ⌘ + K, R   | Shift+Alt+R | Reveal in File Explorer     |
-|     | Alt + F8    | Go to Next Problem          |
-|     | F8          | Go to Next Problem in Files |
+| Mac      | Windows     | To do this                  |
+| -------- | ----------- | --------------------------- |
+| ⌘ + K, R | Shift+Alt+R | Reveal in File Explorer     |
+|          | Alt + F8    | Go to Next Problem          |
+|          | F8          | Go to Next Problem in Files |
+|          | Shift + F12 | Go to References            |
 
 ### Editor management
 
@@ -209,10 +210,10 @@ Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcut
 
 ### Display
 
-| Mac | Windows             | To do this   |
-| --- | ------------------- | ------------ |
-|   ⇧ +⌘ + E  | Ctrl + Shift + E | Show Explorer/ Toggle focus |
-|   ⇧ +⌘ + F  | Ctrl + Shift + F | Show Search |
+| Mac      | Windows          | To do this                  |
+| -------- | ---------------- | --------------------------- |
+| ⇧ +⌘ + E | Ctrl + Shift + E | Show Explorer/ Toggle focus |
+| ⇧ +⌘ + F | Ctrl + Shift + F | Show Search                 |
 
 ### View
 
