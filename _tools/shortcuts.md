@@ -254,3 +254,9 @@ Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcut
 | Press this key | To do this |
 | -------------- | ---------- |
 | Delete         | #          |
+| Mail List      | u          |
+| Next           | k          |
+| Previous       | j          |
+| Reply          | r          |
+| Reply All      | a          |
+
