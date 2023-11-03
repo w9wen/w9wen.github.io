@@ -171,9 +171,9 @@ Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcut
 
 ### Display
 
-| Mac | Windows  | To do this                 |
-| --- | -------- | -------------------------- |
-|     | Ctrl + ` | Toggle Integrated Terminal |
+| Mac      | Windows  | To do this                 |
+| -------- | -------- | -------------------------- |
+| Ctrl + ` | Ctrl + ` | Toggle Integrated Terminal |
 
 ### General
 
@@ -248,3 +248,9 @@ Reference [macOS HERE](https://code.visualstudio.com/shortcuts/keyboard-shortcut
 | --------------------- | ----------- |
 | Insert                | Insert Task |
 | Shift + Space, Delete | Delete Task |
+
+## Gmail
+
+| Press this key | To do this |
+| -------------- | ---------- |
+| Delete         | #          |
