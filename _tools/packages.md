@@ -24,3 +24,11 @@
 #### markdown-writer
 #### kite
   Python code cloud IntelliSense.
+
+#### Maven
+  Settings Level
+  User settings in the user’s home: ${user.home}/.m2/settings.xml
+
+#### NET
+### Windows Installation
+WiX Toolset
