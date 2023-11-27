@@ -32,3 +32,7 @@
 #### NET
 ### Windows Installation
 WiX Toolset
+
+### CLI
+uninstall tool
+https://learn.microsoft.com/en-us/dotnet/core/additional-tools/uninstall-tool?tabs=macos
