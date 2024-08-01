@@ -1,5 +1,5 @@
 ---
-title: 2024-08 大阪京都六日遊
+title: '[Travel] 2024-08 大阪京都六日遊'
 catogories: travel
 ---
 
