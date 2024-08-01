@@ -1,6 +1,6 @@
 ---
-title: 大阪京都六日遊
-categories: travel
+title: 2024-08 大阪京都六日遊
+catogories: travel
 ---
 
 
