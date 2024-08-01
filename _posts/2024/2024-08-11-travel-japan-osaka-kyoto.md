@@ -1,4 +1,5 @@
 ---
+layout: post
 title: '[Travel] 2024-08 大阪京都六日遊'
 categories: travel
 ---
