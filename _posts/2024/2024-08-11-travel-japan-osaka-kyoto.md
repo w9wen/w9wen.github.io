@@ -7,6 +7,7 @@ categories: travel
 
 ## 班機
 `往返桃園機場以及關西機場`
+
 | Date           | Number | Airline            | Departure Time | Arrival Time      |
 | -------------- | ------ | ------------------ | -------------- | ----------------- |
 | 2024/08/11(日) | D7378  | 馬來西亞全亞洲航空 | 15:50          | 19:30             |
@@ -15,7 +16,6 @@ categories: travel
 
 ## 住宿
 
-<!-- generate the table that list the hotel detail every day -->
 | Date           | City | Name | Web Site |
 | -------------- | ---- | ------------- | -------------- |
 | 2024/08/11(日) | 大阪 |               |                |
@@ -48,6 +48,7 @@ categories: travel
 ### 2024/08/12 (一)
 `京都天橋立一日遊`  
 [kkday 【一人成行】京都天橋立一日遊｜伊根灣遊船・天橋立・美山茅屋之里｜大阪難波出發](https://www.kkday.com/zh-tw/order/show/24KK297375000)
+
 ### 2024/08/13 (二)
 `大阪一日遊` 
 
@@ -99,7 +100,6 @@ categories: travel
 
 ## 費用
 
-<!-- Generate a markdown table that list the travel costs, include the flight, hotel and wifi etc.. -->
  | Item | Cost | Note |
  | ---- | ---- | ---- |
  | 機票 |   $16,797   |      |
