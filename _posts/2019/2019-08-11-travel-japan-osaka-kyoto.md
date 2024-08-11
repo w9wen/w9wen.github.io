@@ -164,3 +164,5 @@ HARUKA       |    $727            | 24KK272955361<br> 須在櫃檯領取 [兌換
 
 ### Jetfi QR Code
 ![Jetfi QR Code](../../images/2024/08/JetfiQRCode.png) 
+
+[QR Code URL](https://wifiotg.iiot.io/modules/opage-payment-barcode?campaignType=opage_voucher&campaignId=ov_24f8df9332b0db429e6f8f690d412914&businessId=jxB8yxvko&chl=XG_zv1722353123908)
