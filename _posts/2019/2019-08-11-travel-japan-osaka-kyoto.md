@@ -127,14 +127,14 @@ Date           | City | Name | Web Site
 Item         | Cost           | Note 
 ------------ | -------------- | ---- 
 機票         | $16,797        |      
-WIFI         | $297           |      
-大阪住宿     | $7,374         |      
-京都住宿     | $4,781 |      
+WIFI         | $297           |    ORD0022136382  
+大阪住宿     | $7,374         |   ORD0022247677, 22315024058218   
+京都住宿     | $4,781 |      ORD0022339251, 20240804837700003
 機場接送服務 |  $200              | [肯驛隨行券](https://eticket.canlead.com.tw/airport/tw/index.aspx?tk=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXJpYWxpZCI6IkYxMzMzNzMwNCJ9.1fOFwg25DK101F5GVXDwrIMsVe0NezLK0gzcZXOVrAY)
-京都天橋立   |        $4,880        |      
-嵐山、小火車 |      $4,165          |      
-大阪周遊卡   |        $1,338        |      
-HARUKA       |    $727            | 須在櫃檯領取 [兌換E-TICKET](https://www.westjr.co.jp/global/tc/howto/ticket-vending-machine/)
+京都天橋立   |        $4,880        |     24KK297375000 
+嵐山、小火車 |      $4,165          |    24KK272955461  
+大阪周遊卡   |        $1,338        |   24KK296675539   
+HARUKA       |    $727            | 24KK272955361<br> 須在櫃檯領取 [兌換E-TICKET](https://www.westjr.co.jp/global/tc/howto/ticket-vending-machine/)
 
 
 - 全支付
@@ -159,3 +159,8 @@ HARUKA       |    $727            | 須在櫃檯領取 [兌換E-TICKET](https://
     - 每月最高享160點
     `160/0.15=1066.67 | 日幣: 5,440` 
   - **存入台幣1,100元**
+
+## 其他
+
+### Jetfi QR Code
+![Jetfi QR Code](../../images/2024/08/JetfiQRCode.png) 
