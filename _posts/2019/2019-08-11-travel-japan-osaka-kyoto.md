@@ -126,7 +126,7 @@ Date           | City | Name | Web Site
 
 ### 2024/08/16 (五)
 
-[京都 |保津川遊船、嵯峨野浪漫小火車、嵐山漫步 |京都站出發](https://www.kkday.com/zh-tw/product/118102-kyoto-hozugawa-river-boat-sagano-train-arashiyama-bamboo-stroll-japan)
+[京都 | 保津川遊船、嵯峨野浪漫小火車、嵐山漫步 | 京都站出發](https://www.kkday.com/zh-tw/product/118102-kyoto-hozugawa-river-boat-sagano-train-arashiyama-bamboo-stroll-japan)
 
 - 08:30 Check out後，行李可寄放飯店
 - 15:45 遊玩結束回到飯店取行李
