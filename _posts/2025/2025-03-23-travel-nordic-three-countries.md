@@ -56,7 +56,9 @@ tags:
 
 **🍽️ 附近餐廳（赫爾辛基）：**
 - Goodwin The Steak House — 離旅館步行約 21 分鐘
-- Yrjönkatu — 離旅館約 10 分鐘
+
+**🏊 附近設施（赫爾辛基）：**
+- Yrjönkatu — 芬蘭百年游泳池，離旅館約 10 分鐘
 
 **🧖 住宿備註：**
 - Home Hotel Jugend：晚上 sauna（多數住客免費，若付費預估 EUR 0～15）
