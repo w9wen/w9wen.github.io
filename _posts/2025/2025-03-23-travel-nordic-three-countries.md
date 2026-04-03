@@ -545,6 +545,9 @@ tags:
 | 項目 | 幣別 | 金額 | 備註 |
 |------|------|-----:|:-----|
 | 秘魯芒果 | TWD | 515 | 即時刷卡 |
+| Rawchoklad kaffe（生巧克力 咖啡）× 5 | SEK | 212.75 | Visa 感應（尾號 9090） |
+| Rawchoklad kardemum（生巧克力 荳蔻）× 5 | SEK | 212.75 | Visa 感應（尾號 9090） |
+| **小計 — MAXI ICA Stormarknad, Karlstad** | **SEK** | **425.50** | 15:42 |
 
 ---
 
