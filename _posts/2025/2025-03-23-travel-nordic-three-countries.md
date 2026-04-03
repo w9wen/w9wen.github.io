@@ -550,7 +550,7 @@ tags:
 | **小計 — MAXI ICA Stormarknad, Karlstad** | **SEK** | **425.50** | 15:42（台幣即時刷卡 TWD 1,454） |
 | Mariest 3.5% 6-Pack × 2 | SEK | 25.56 | Visa 感應（尾號 9090） |
 | Pant × 2 | SEK | 2.00 | Visa 感應（尾號 9090） |
-| **小計 — Stora Coop, Bergvik Karlstad** | **SEK** | **27.56** | 15:58 |
+| **小計 — Stora Coop, Bergvik Karlstad** | **SEK** | **27.56** | 15:58（台幣即時刷卡 TWD 94） |
 
 ---
 
