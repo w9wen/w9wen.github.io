@@ -457,6 +457,7 @@ tags:
 | 項目 | 幣別 | 金額 | TWD | 備註 |
 |------|------|-----:|----:|:-----|
 | 肉桂捲（Korvapuusti）| EUR | 3.64 | 135 | Cafe Regatta，Merikannontie 8，赫爾辛基，09:46，Visa 感應（尾號 9090）|
+| 烤雞腿（0.22kg）、榛果捲心酥、Karhu Solar IPA 啤酒（午餐）| EUR | 9.26 | 344 | K-supermarket Postitalo，Elielinaukio 2，赫爾辛基，12:49，Visa 感應（尾號 9090）|
 | 赫爾辛基圖案磁鐵 | EUR | 6.30 | ～234 | Annensoppi，Fredrikinkatu 68，赫爾辛基，11:01，Visa 感應（尾號 9090）。台幣待出帳確認 |
 
 ---
