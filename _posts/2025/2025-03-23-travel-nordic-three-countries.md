@@ -456,7 +456,7 @@ tags:
 
 | 項目 | 幣別 | 金額 | TWD | 備註 |
 |------|------|-----:|----:|:-----|
-| mag. hki glitteri 58375 | EUR | 6.30 | ～234 | Annensoppi，Fredrikinkatu 68，赫爾辛基，11:01，Visa 感應（尾號 9090）。台幣待出帳確認 |
+| 赫爾辛基圖案磁鐵 | EUR | 6.30 | ～234 | Annensoppi，Fredrikinkatu 68，赫爾辛基，11:01，Visa 感應（尾號 9090）。台幣待出帳確認 |
 
 ---
 
