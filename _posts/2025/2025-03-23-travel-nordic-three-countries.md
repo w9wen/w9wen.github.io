@@ -656,8 +656,6 @@ tags:
   - 車上共 16 名乘客＋1 名司機
   - 研判進入圓環車速過快，冬季濕滑路面打滑，撞護欄後翻覆
   - 本人無受傷，兩名乘客由救護車送醫檢查，其餘人員由計程車接送
-  - E6 公路雙向封閉，拖吊車到場處理
-  - 新聞來源：[Nettavisen 報導](https://www.nettavisen.no/nyheter/bussvelt-pa-e6-i-gjovik-stenger-veien-i-begge-retninger/s/5-95-2967907)
 - **醫院檢查結果（Dr. Ringerud）：**
   - 發現主動脈瓣膜處有**輕微心雜音**，可能為輕微主動脈瓣狹窄
   - 50歲以上常見，通常不引起症狀，很少需要治療
