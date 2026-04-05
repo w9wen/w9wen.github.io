@@ -459,6 +459,7 @@ tags:
 | 肉桂捲（Korvapuusti）| EUR | 3.64 | 135 | Cafe Regatta，Merikannontie 8，赫爾辛基，09:46，Visa 感應（尾號 9090）|
 | 烤雞腿（0.22kg）、榛果捲心酥、Karhu Solar IPA 啤酒（午餐）| EUR | 9.26 | 344 | K-supermarket Postitalo，Elielinaukio 2，赫爾辛基，12:49，Visa 感應（尾號 9090）|
 | 赫爾辛基圖案磁鐵 | EUR | 6.30 | ～234 | Annensoppi，Fredrikinkatu 68，赫爾辛基，11:01，Visa 感應（尾號 9090）。台幣待出帳確認 |
+| Fazer 藍色牛奶巧克力 250g × 3、Fazer 黑巧克力 250g × 3、Fazer 70% 黑巧克力禮盒 × 5、水果糖 × 3（8% 折扣）| EUR | 78.89 | 2,929 | 詩麗雅號 Silja Serenade Superstore，18:57，Visa 感應（尾號 9090）|
 
 ---
 
