@@ -457,8 +457,8 @@ tags:
 | 項目 | 幣別 | 金額 | TWD | 備註 |
 |------|------|-----:|----:|:-----|
 | 肉桂捲（Korvapuusti）| EUR | 3.64 | 135 | Cafe Regatta，Merikannontie 8，赫爾辛基，09:46，Visa 感應（尾號 9090）|
-| 烤雞腿（0.22kg）、榛果捲心酥、Karhu Solar IPA 啤酒（午餐）| EUR | 9.26 | 344 | K-supermarket Postitalo，Elielinaukio 2，赫爾辛基，12:49，Visa 感應（尾號 9090）|
 | 赫爾辛基圖案磁鐵 | EUR | 6.30 | ～234 | Annensoppi，Fredrikinkatu 68，赫爾辛基，11:01，Visa 感應（尾號 9090）。台幣待出帳確認 |
+| 烤雞腿（0.22kg）、榛果捲心酥、Karhu Solar IPA 啤酒（午餐）| EUR | 9.26 | 344 | K-supermarket Postitalo，Elielinaukio 2，赫爾辛基，12:49，Visa 感應（尾號 9090）|
 | Fazer 藍色牛奶巧克力 250g × 3、Fazer 黑巧克力 250g × 3、Fazer 70% 黑巧克力禮盒 × 5、水果糖 × 3（8% 折扣）| EUR | 78.89 | 2,929 | 詩麗雅號 Silja Serenade Superstore，18:57，Visa 感應（尾號 9090）|
 
 ---
@@ -553,17 +553,14 @@ tags:
 
 | 項目 | 幣別 | 金額 | 支付 |
 |------|------|-----:|:----:|
+| （三餐皆含） | — | 0 | — |
 
 ### 📝 D5 實際記錄
 
 | 項目 | 幣別 | 金額 | TWD | 備註 |
 |------|------|-----:|----:|:-----|
-| Rawchoklad kaffe（生巧克力 咖啡）× 5 | SEK | 212.75 | — | Visa 感應（尾號 9090） |
-| Rawchoklad kardemum（生巧克力 荳蔻）× 5 | SEK | 212.75 | — | Visa 感應（尾號 9090） |
-| **小計 — MAXI ICA Stormarknad, Karlstad** | **SEK** | **425.50** | **1,454** | 15:42，Visa 感應（尾號 9090） |
-| Mariest 3.5% 6-Pack × 2 | SEK | 25.56 | — | Visa 感應（尾號 9090） |
-| Pant × 2 | SEK | 2.00 | — | Visa 感應（尾號 9090） |
-| **小計 — Stora Coop, Bergvik Karlstad** | **SEK** | **27.56** | **94** | 15:58，Visa 感應（尾號 9090） |
+| 生巧克力咖啡口味 × 5、生巧克力荳蔻口味 × 5 | SEK | 425.50 | 1,454 | MAXI ICA Stormarknad，Karlstad，15:42，Visa 感應（尾號 9090）|
+| Mariest 3.5% 啤酒 6-Pack × 2 | SEK | 27.56 | 94 | Stora Coop，Bergvik Karlstad，15:58，Visa 感應（尾號 9090）|
 
 ---
 
