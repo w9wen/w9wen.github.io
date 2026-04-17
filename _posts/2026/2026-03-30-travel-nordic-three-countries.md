@@ -398,6 +398,13 @@ tags:
 
 > ♨️ **芬蘭浴是免費飯店設施**，通常位於地下室或頂樓。使用時間可詢問櫃台。
 
+
+### 📝 D2 實際記錄
+
+| 項目 | 幣別 | 金額 | TWD | 備註 |
+|------|------|-----:|----:|:-----|
+| Sauna 使用費 | EUR | 15.00 | 554 | Home Hotel Jugend，Lönnrotinkatu 29，Helsinki，2026-03-31，Visa Contactless（尾號 9090）；手續費 TWD 8 |
+
 ---
 
 ## D3｜4/01（三）🇫🇮 赫爾辛基 → 🚢 詩麗雅號遊輪
@@ -517,6 +524,7 @@ tags:
 | 項目 | 幣別 | 金額 | TWD | 備註 |
 |------|------|-----:|----:|:-----|
 | 秘魯芒果（Frukt） | SEK | 150.00 | 515 | Guls Blommor & Grönt，Hötorget 34，斯德哥爾摩，17:45，Visa 感應（尾號 9090）|
+| 熱可可 + 雙色起司蛋糕（芒果凍塔＋奶油起司蛋糕）× 1 份 | SEK | 140.00 | 479 | Sundbergs Konditori（斯德哥爾摩最古老咖啡廳，1785年創立），Järntorget 83，Gamla Stan，2026-04-02 15:30，Visa Contactless（尾號 2739）；手續費 TWD 7 |
 
 ---
 
@@ -561,6 +569,7 @@ tags:
 |------|------|-----:|----:|:-----|
 | 生巧克力咖啡口味 × 5、生巧克力荳蔻口味 × 5 | SEK | 425.50 | 1,454 | MAXI ICA Stormarknad，Karlstad，15:42，Visa 感應（尾號 9090）|
 | Mariest 3.5% 啤酒 6-Pack × 2 | SEK | 27.56 | 94 | Stora Coop，Bergvik Karlstad，15:58，Visa 感應（尾號 9090）|
+| Barebells Milkshake Pear（高蛋白奶昔，西洋梨口味）× 1 | SEK | 34.00 | 116 | OKQ8，Sätra Trafikplats E18/E20，Arboga，10:28，Visa Contactless（尾號 9090）；手續費 TWD 2 |
 
 ---
 
@@ -705,7 +714,14 @@ tags:
 
 ---
 
-## D9｜4/07（二）🇳🇴 哈丹格峽灣 → 菲爾鈴瀑布 → 奧斯陸
+### 📝 D9 實際記錄
+
+| 項目 | 幣別 | 金額 | TWD | 備註 |
+|------|------|-----:|----:|:-----|
+| 蝦味起司抹醬（REKEOST TUBE）× 5、森林莓果蘋果酒（GR CIDER SKOGSB）× 1、西洋梨蘋果酒無糖（PARECDR U/SUK）× 1 等 7 件 | NOK | 283.80 | 936 | REMA 1000 Fla，2026-04-07 15:24，Visa Contactless；手續費 TWD 14 |
+| OSTEPØLSE M/BA（起司香腸）× 3 | NOK | 69.90 | 230 | Circle K E6 Furuset，Tevlingveien 19，Oslo，20:04，Visa Contactless（尾號 9090）；手續費 TWD 3 |
+| Ringnes Pilsner 大杯生啤酒 × 1 | NOK | 179.00 | 590 | Radisson Blu Oslo Alna，Betula Restaurant & Bar，2026-04-07 19:32，簽帳；手續費 TWD 9 |
+
 
 | 餐食 | 住宿 |
 |------|------|
@@ -776,6 +792,14 @@ tags:
 |------|------|-----:|:----:|
 | 午餐（自理） | NOK | 100～200 | 💳 |
 | 最後採購 | NOK | 依需求 | 💳 |
+
+### 📝 D10 實際記錄
+
+| 項目 | 幣別 | 金額 | TWD | 備註 |
+|------|------|-----:|----:|:-----|
+| 巴西冰咖啡（ISKAFFE BRASIL）× 1、摩卡冰咖啡（ISKAFFE MOCCA）× 1（含套餐折扣 -15.90）| NOK | 59.90 | 199 | Circle K E6 Furuset，Tevlingveien 19，Oslo，2026-04-08 05:41，Visa Contactless（尾號 2739）；手續費 TWD 3 |
+| FROOSH SMOOTHIE STRA | NOK | 40.00 | 133 | 7-Eleven，Oslo，2026-04-08 11:22，Visa Contactless（尾號 2739）；手續費 TWD 2 |
+| **小計** | | | **135** | 含手續費 TWD 2 |
 
 ---
 
